@@ -2,7 +2,8 @@ import React from 'react';
 import mainlogo from './mainlogo.png';
 import currentcourses from './currentcourses.json';
 import CodeAtRamiroText from './components/CodeAtRamiroTest.js'
-console.log("This is a different file!");
+import Image from './components/Image.js'
+
 class PageLogo extends React.Component {
   constructor(props){
     super(props);
@@ -21,27 +22,12 @@ class PageLogo extends React.Component {
   }
 }
 
-class Image extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      id: props.id,
-      url:props.url,
-      alt:props.alt
-    };
-  }
-  render(){
-    return(
-      <img id={this.state.id} src={this.state.url} alt={this.state.alt}/>
-    );
-  }
-}
 
 
 function App() {
   return (
     <div>
-      <CodeAtRamiroText hashcolor="black" codecolor="red" atcolor="blue" ramirocolor="#AA0000"  />
+      <CodeAtRamiroText hashcolor="black" codecolor="red" atcolor="blue" ramirocolor="#AA0000"  customfont="hack"/>
       <PageLogo url={mainlogo} alt="A picture of a fox" />
     </div>
   );

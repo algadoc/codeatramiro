@@ -31,4 +31,4 @@ class CodeAtRamiroText extends React.Component {
     );
   }
 }
-  export default CodeAtRamiroText
+  export default CodeAtRamiroText;
