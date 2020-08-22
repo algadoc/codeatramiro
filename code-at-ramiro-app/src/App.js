@@ -2,7 +2,7 @@ import React from 'react';
 import mainlogo from './mainlogo.png';
 import currentcourses from './currentcourses.json';
 import CodeAtRamiroText from './components/CodeAtRamiroTest.js'
-import * from './components'
+console.log("This is a different file!");
 class PageLogo extends React.Component {
   constructor(props){
     super(props);
