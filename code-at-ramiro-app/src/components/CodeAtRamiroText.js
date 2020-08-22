@@ -5,6 +5,7 @@ class CodeAtRamiroText extends React.Component {
     super(props);
     this.state = {
       id: props.id,
+      className: props.className,
       hashcolor: props.hashcolor,
       codecolor: props.codecolor,
       atcolor: props.atcolor,
@@ -14,7 +15,7 @@ class CodeAtRamiroText extends React.Component {
   }
   render(){
     return(
-      <h1 style={{fontFamily: this.state.customfont}}>
+      <h1 style={{fontFamily: this.state.customfont}} id={this.state.id} className={this.state.className}>
       <span style={{color: this.state.hashcolor}}>
       #
       </span>
