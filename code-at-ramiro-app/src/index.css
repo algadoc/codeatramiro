@@ -47,6 +47,7 @@ table {
 
 body{
   background-color: #303030;
+	overflow: hidden;
 }
 
 #main{
@@ -72,36 +73,103 @@ body{
   align-self: center;
   text-align: center;
 }
-#logodiv{
-  display: grid;
-  grid-template-columns: auto auto;
-  width: 100%;
-  height: 33vh;
-  grid-gap: 5%;
-  background-color: #202020;
-  border-bottom: 8px groove #101010;
-  justify-content: center;
+
+/*Logo Div Conditional Styling*/
+@media screen and (min-width: 700px) {
+	#logodiv{
+	  display: grid;
+	  grid-template-columns: auto auto;
+	  width: 100%;
+	  height: 45vh;
+	  grid-gap: 5%;
+	  background-color: #202020;
+	  border-bottom: 8px groove #101010;
+	  justify-content: space-evenly;
+	}
+	#MainLogoImage{
+		grid-column: 1/2;
+	  align-self: center;
+	  height: 42vh;
+	}
+	#logotextdiv{
+		grid-column: 2/3;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	}
+	#MainLogoText{
+	  font-size: 18vh;
+	  margin:5vh;
+	}
+	#SubLogoText{
+	  font-size: 5vh;
+	  color:white;
+	  font-family: Hack;
+		margin-bottom: 4vh;
+	}
 }
-#MainLogoImage{
-  align-self: center;
-  height: 30vh;
+@media screen and (max-width: 700px) {
+	#logodiv{
+	  display: grid;
+	  grid-template-rows: auto auto;
+	  width: 100%;
+	  height: auto;
+	  grid-gap: 2%;
+	  background-color: #202020;
+	  border-bottom: 8px groove #101010;
+  	justify-items: center;
+	}
+	#MainLogoImage{
+	  align-self: center;
+	  height: 20vh;
+	}
+	#logotextdiv{
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	}
+	#MainLogoText{
+	  font-size: 7vh;
+	  margin:1vh;
+	}
+	#SubLogoText{
+	  font-size: 3vh;
+	  color:white;
+	  font-family: Hack;
+		margin-bottom: 3vh
+	}
 }
-#logotextdiv{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#MainLogoText{
-  font-size: 9vh;
-  margin:6vh;
-}
-#SubLogoText{
-  font-size: 4vh;
-  color:white;
-  font-family: Hack;
-}
+
 
 #contentdiv{
   width: 100%;
   height:200vh;
+}
+
+#coursediv{
+	background-color: #131313;
+	display: flex;
+}
+
+	/* Animation Classes*/
+@keyframes fadeoutdown {
+  0%   {opacity: 1; top:0px;}
+  100% {opacity: 0; top:100vh;}
+}
+
+@keyframes fadeinup {
+  0%   {opacity: 0; top:100vh;}
+  100% {opacity: 1; top:0px;}
+}
+
+.fadeoutdown{
+	position: relative !important;
+	animation-name: fadeoutdown !important;
+	animation-duration: 1s !important;
+}
+
+.fadeinup{
+	position: relative !important;
+	animation-name: fadeinup !important;
+	animation-duration: 2s !important;
 }
