@@ -89,7 +89,7 @@ body{
 	#MainLogoImage{
 		grid-column: 1/2;
 	  align-self: center;
-	  height: 45vh;
+	  height: 38vh;
 	}
 	#logotextdiv{
 		grid-column: 2/3;
@@ -98,11 +98,11 @@ body{
 	  align-items: center;
 	}
 	#MainLogoText{
-	  font-size: 10vw;
+	  font-size: 8vw;
 	  margin:5vh;
 	}
 	#SubLogoText{
-	  font-size: 5vw;
+	  font-size: 3vw;
 	  color:white;
 	  font-family: Hack;
 		margin-bottom: 4vh;
