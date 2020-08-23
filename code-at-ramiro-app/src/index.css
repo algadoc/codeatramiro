@@ -89,7 +89,7 @@ body{
 	#MainLogoImage{
 		grid-column: 1/2;
 	  align-self: center;
-	  height: 42vh;
+	  height: 45vh;
 	}
 	#logotextdiv{
 		grid-column: 2/3;
@@ -98,16 +98,17 @@ body{
 	  align-items: center;
 	}
 	#MainLogoText{
-	  font-size: 18vh;
+	  font-size: 10vw;
 	  margin:5vh;
 	}
 	#SubLogoText{
-	  font-size: 5vh;
+	  font-size: 5vw;
 	  color:white;
 	  font-family: Hack;
 		margin-bottom: 4vh;
 	}
 }
+
 @media screen and (max-width: 700px) {
 	#logodiv{
 	  display: grid;
@@ -129,11 +130,11 @@ body{
 	  align-items: center;
 	}
 	#MainLogoText{
-	  font-size: 7vh;
+	  font-size: 10vw;
 	  margin:1vh;
 	}
 	#SubLogoText{
-	  font-size: 3vh;
+	  font-size: 5vw;
 	  color:white;
 	  font-family: Hack;
 		margin-bottom: 3vh
