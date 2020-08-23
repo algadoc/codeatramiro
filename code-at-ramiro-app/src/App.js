@@ -9,8 +9,8 @@ import animateElement from './components/animateElement.js'
 var iscoursesactive = false;
 var isanimationrunnint = false;
 function handleCoursesButton(event){
-  iscoursesactive = !iscoursesactive;
   if(!isanimationrunnint){
+    iscoursesactive = !iscoursesactive;
     isanimationrunnint = true;
     if (iscoursesactive){
       animateElement("logodiv","fadeoutdown","grid","none",1000);
