@@ -15,6 +15,8 @@ function handleCoursesButton(event){
     if (iscoursesactive){
       animateElement("logodiv","fadeoutdown","grid","none",1000);
       animateElement("contentdiv","fadeoutdown","flex","none",1000);
+      animateElement("coursesbuttonarrow","rotatedown","block","block",2000)
+      document.getElementById("coursesbuttonarrow").style.transform = "rotate(90deg)"
       setTimeout(() =>{
         animateElement("coursediv","fadeinup","flex","flex",2000);
         setTimeout(() => {isanimationrunnint = false;},2300);
@@ -22,6 +24,8 @@ function handleCoursesButton(event){
     }
     else{
       animateElement("coursediv","fadeoutdown","flex","none",1000);
+      animateElement("coursesbuttonarrow","rotateup","block","block",2000)
+      document.getElementById("coursesbuttonarrow").style.transform = "rotate(0deg)"
       setTimeout(() => {
         animateElement("logodiv","fadeinup","grid","grid",2000);
         animateElement("contentdiv","fadeinup","flex","flex",2000)
@@ -36,7 +40,10 @@ function App() {
   return (
     <div>
     <div id="toolbardiv">
-    <button id="coursesbutton" onClick={handleCoursesButton}></button>
+    <button id="coursesbutton" onClick={handleCoursesButton}>
+      <p id="coursesbuttontext">Cursos</p>
+      <p id="coursesbuttonarrow">&#8250;</p>
+    </button>
     <CodeAtRamiroText id="toolbartext" hashcolor="purple" codecolor="crimson" atcolor="#f1dd38 " ramirocolor="#73c990"  customfont="Hack"/>
     </div>
     <div id="main">

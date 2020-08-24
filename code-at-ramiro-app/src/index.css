@@ -58,10 +58,10 @@ body{
 
 #toolbardiv{
   width: 100%;
-  height: 5vh;
+  height: auto;
   border-bottom: 4px outset #050505;
   display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   position: sticky;
   left: 0;
@@ -153,6 +153,25 @@ body{
 	display: flex;
 }
 
+#coursesbutton{
+	align-self: left;
+	display: grid;
+	width: 90px;
+	grid-template-columns: auto auto;
+	justify-content: left;
+	margin:3px;
+	font-family: Hack;
+	background-color: #404040;
+	border:2px solid #202020;
+	border-radius: 30px;
+	color:white;
+	outline: none;
+}
+
+#coursesbuttonarrow{
+	margin-right: -37px;
+}
+
 	/* Animation Classes*/
 @keyframes fadeoutdown {
   0%   {opacity: 1; top:0px;}
@@ -162,6 +181,26 @@ body{
 @keyframes fadeinup {
   0%   {opacity: 0; top:100vh;}
   100% {opacity: 1; top:0px;}
+}
+
+@keyframes rotatedown{
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(90deg);}
+}
+
+@keyframes rotateup{
+	0% {transform: rotate(90deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.rotatedown{
+	animation-name: rotatedown !important;
+	animation-duration: 2s !important;
+}
+
+.rotateup{
+		animation-name: rotateup !important;
+		animation-duration: 2s !important;
 }
 
 .fadeoutdown{
