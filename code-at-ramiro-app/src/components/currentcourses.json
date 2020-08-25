@@ -1,13 +1,72 @@
 [{
   "language":"Python",
-  "courses":[
+  "languageico":"",
+  "sections":[
     {
-      "name":"Intro",
-      "url":"TestURL1"
+      "name":"Intro to Python",
+      "subsections":[{
+        "name":"Intro",
+        "fileurl":"TestURL1"
+      },
+      {
+        "name":"Syntax",
+        "fileurl":"TestURL2"
+      },
+      {
+        "name":"Syntax 2",
+        "fileurl":"TestURL3"
+      }]
     },
     {
-      "name":"Syntax",
-      "url":"TestURL2"
+      "name":"Getting into it",
+      "subsections":[{
+        "name":"Heavy 1",
+        "fileurl":"TestURL4"
+      },
+      {
+        "name":"Heavy 2",
+        "fileurl":"TestURL5"
+      },
+      {
+        "name":"Heavy 3",
+        "fileurl":"TestURL6"
+      }]
+    }
+  ]
+},
+{
+  "language":"Javacript",
+  "languageico":"",
+  "sections":[
+    {
+      "name":"Intro to Javascript",
+      "subsections":[{
+        "name":"Intro",
+        "fileurl":"TestURL1"
+      },
+      {
+        "name":"Syntax",
+        "fileurl":"TestURL2"
+      },
+      {
+        "name":"Syntax 2",
+        "fileurl":"TestURL3"
+      }]
+    },
+    {
+      "name":"Getting into it",
+      "subsections":[{
+        "name":"Heavy 1",
+        "fileurl":"TestURL4"
+      },
+      {
+        "name":"Heavy 2",
+        "fileurl":"TestURL5"
+      },
+      {
+        "name":"Heavy 3",
+        "fileurl":"TestURL6"
+      }]
     }
   ]
 }]

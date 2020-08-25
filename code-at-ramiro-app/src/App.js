@@ -3,7 +3,7 @@ import mainlogo from './mainlogo.png';
 import CodeAtRamiroText from './components/CodeAtRamiroText.js';
 import Image from './components/Image.js';
 import Text from './components/Text.js';
-import CourseDiv from './components/CourseDiv.js'
+import CourseViewerComponent from './components/CourseViewerComponent.js'
 import animateElement from './components/animateElement.js'
 
 var iscoursesactive = false;
@@ -59,6 +59,9 @@ function App() {
       </div>
       <div id="coursediv">
       This is The courses!!!!!
+      </div>
+      <div id="courseviewer">
+      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0"/>
       </div>
     </div>
     </div>

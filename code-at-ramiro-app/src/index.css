@@ -85,6 +85,9 @@ body{
 	  background-color: #202020;
 	  border-bottom: 8px groove #101010;
 	  justify-content: space-evenly;
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		user-select:none;
 	}
 	#MainLogoImage{
 		grid-column: 1/2;
@@ -120,6 +123,9 @@ body{
 	  background-color: #202020;
 	  border-bottom: 8px groove #101010;
   	justify-items: center;
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		user-select:none;
 	}
 	#MainLogoImage{
 	  align-self: center;
@@ -145,12 +151,11 @@ body{
 
 #contentdiv{
   width: 100%;
-  height:200vh;
 }
 
 #coursediv{
 	background-color: #131313;
-	display: flex;
+	display: none;
 }
 
 #coursesbutton{
@@ -170,6 +175,58 @@ body{
 
 #coursesbuttonarrow{
 	margin-right: -37px;
+}
+
+#courseviewermaindiv{
+	display: grid;
+	width: 100%;
+	grid-template-columns: auto auto;
+	justify-content: space-evenly;
+	grid-gap: 5vw;
+	margin: 5px;
+	border: 5px ridge #999999;
+}
+
+#courseguidediv{
+	grid-column: 1/2;
+	width: min(auto,100vw);
+	display: flex;
+	margin:10px;
+	border:4px solid white;
+	flex-direction: column;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none;
+	color: white;
+	padding:5px
+}
+
+#languagetitle{
+	font-family: Hack;
+	font-size: min(5vw,5vh);
+	margin: 10px;
+	padding:3px;
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+}
+#listnestdiv > div > h3{
+	margin:3px;
+	padding:3px;
+	border-top: 2px solid #BBBBBB;
+	border-bottom: 2px solid #BBBBBB;
+}
+#listnestdiv > div > ul{
+   list-style-type: square;
+	 margin-left:20px;
+	 padding-top:3px;
+	 padding-bottom:3px;
+}
+
+
+
+#coursedisplaydiv{
+		grid-column: 2/3;
+		padding:16px;
 }
 
 	/* Animation Classes*/
