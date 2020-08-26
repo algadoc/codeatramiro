@@ -1,40 +1,19 @@
-import React from 'react';
-import mainlogo from './mainlogo.png';
-import CodeAtRamiroText from './components/CodeAtRamiroText.js';
-import Image from './components/Image.js';
-import Text from './components/Text.js';
-import CourseViewerComponent from './components/CourseViewerComponent.js'
-import animateElement from './components/animateElement.js'
+/*
+Code written by Alfonso Lagares de Toledo, MIT Licensed
+Main code file for the Code@Ramiro website
+So you are the new maintenance guy....
+May God have mercy on your soul
+*/
 
-var iscoursesactive = false;
-var isanimationrunnint = false;
-function handleCoursesButton(event){
-  if(!isanimationrunnint){
-    iscoursesactive = !iscoursesactive;
-    isanimationrunnint = true;
-    if (iscoursesactive){
-      animateElement("logodiv","fadeoutdown","grid","none",1000);
-      animateElement("contentdiv","fadeoutdown","flex","none",1000);
-      animateElement("coursesbuttonarrow","rotatedown","block","block",2000)
-      document.getElementById("coursesbuttonarrow").style.transform = "rotate(90deg)"
-      setTimeout(() =>{
-        animateElement("coursediv","fadeinup","flex","flex",2000);
-        setTimeout(() => {isanimationrunnint = false;},2300);
-      },1010);
-    }
-    else{
-      animateElement("coursediv","fadeoutdown","flex","none",1000);
-      animateElement("coursesbuttonarrow","rotateup","block","block",2000)
-      document.getElementById("coursesbuttonarrow").style.transform = "rotate(0deg)"
-      setTimeout(() => {
-        animateElement("logodiv","fadeinup","grid","grid",2000);
-        animateElement("contentdiv","fadeinup","flex","flex",2000)
-        setTimeout(() => {isanimationrunnint = false;},2300);
-      },1010);
-    }
+import React from 'react'; //Import react
+import mainlogo from './mainlogo.png'; //Main Page logo file
+import CodeAtRamiroText from './components/CodeAtRamiroText.js'; //Code at Ramiro component: fancy colored text
+import Image from './components/Image.js'; //Basic Image Component
+import Text from './components/Text.js'; //Basic Text Component
+import CourseViewerComponent from './components/CourseViewerComponent.js' //Course viewer component
+import animateElement from './components/animateElement.js' //Animate Element function, vanilla JS
+import handleCoursesButton from './components/handleCoursesButton.js'
 
-  }
-}
 
 function App() {
   return (
@@ -60,9 +39,7 @@ function App() {
       <div id="coursediv">
       This is The courses!!!!!
       </div>
-      <div id="courseviewer">
-      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0"/>
-      </div>
+      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro to Python" currentsubsection="Intro"/>
     </div>
     </div>
   );

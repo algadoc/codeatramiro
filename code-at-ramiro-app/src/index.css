@@ -192,7 +192,7 @@ body{
 	width: min(auto,100vw);
 	display: flex;
 	margin:10px;
-	border:4px solid white;
+	border:4px solid grey;
 	flex-direction: column;
 	-webkit-user-select:none;
 	-moz-user-select:none;
@@ -222,7 +222,18 @@ body{
 	 padding-bottom:3px;
 }
 
-
+.noncurrentsubsection{
+	background-color: #050505;
+}
+.currentsubsection{
+	background-color: red;
+}
+.noncurrentsection{
+	background-color: #050505;
+}
+.currentsection{
+	background-color: blue;
+}
 
 #coursedisplaydiv{
 		grid-column: 2/3;
