@@ -184,7 +184,8 @@ body{
 	justify-content: space-evenly;
 	grid-gap: 5vw;
 	margin: 5px;
-	border: 5px ridge #999999;
+	border-top: 5px ridge #999999;
+	border-bottom: 5px ridge #999999;
 }
 
 #courseguidediv{
