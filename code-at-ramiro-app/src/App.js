@@ -18,30 +18,30 @@ import handleCoursesButton from './components/handleCoursesButton.js' //Function
 function App() {
   return (
     <div>
-    <div id="toolbardiv"> //Top toolvar, hosts return Code@Ramiro text #TODO# and courses button
+    <div id="toolbardiv"> {/*Top toolvar, hosts return Code@Ramiro text #TODO# and courses button*/}
     <button id="coursesbutton" onClick={handleCoursesButton}>
       <p id="coursesbuttontext">Cursos</p>
-      <p id="coursesbuttonarrow">&#8250;</p> //Arrow, animated to rotate when showing courses div
+      <p id="coursesbuttonarrow">&#8250;</p> {/*Arrow, animated to rotate when showing courses div*/}
     </button>
     <CodeAtRamiroText id="toolbartext" hashcolor="purple" codecolor="crimson" atcolor="#f1dd38 " ramirocolor="#73c990"  customfont="Hack"/>
     </div>
-    <div id="main"> //Every div here is a separated part of the webite, can fade in and our at will
-      <div id="logodiv"> //Div that hosts the logo
+    <div id="main"> {/*Every div here is a separated part of the webite, can fade in and our at will*/}
+      <div id="logodiv"> {/*Div that hosts the logo*/}
         <Image id="MainLogoImage" url={mainlogo} alt="Sui Generis Logo"/>
         <div id="logotextdiv">
           <CodeAtRamiroText id="MainLogoText" hashcolor="purple" codecolor="crimson" atcolor="#f1dd38 " ramirocolor="#73c990"  customfont="Hack"/>
           <Text id="SubLogoText" content="Grupo de programación Suí Géneris"/>
         </div>
       </div>
-      <div id="contentdiv"> //Div for permanent front-page content
+      <div id="contentdiv"> {/*Div for permanent front-page content*/}
       This is content!!!!
       </div>
-      <div id="coursediv">//Div that hosts the links to courses
+      <div id="coursediv">{/*Div that hosts the links to courses*/}
       This is The courses!!!!!
       </div>
-      //Component that actually shows the contents
-      //The coder's nightmare
-      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro to Python" currentsubsection="Intro"/>
+      {/*Component that actually shows the contents*/}
+      {/*The coder's nightmare*/}
+      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro to Python" currentsubsection="Syntax"/>
     </div>
     </div>
   );

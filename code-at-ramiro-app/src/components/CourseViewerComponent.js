@@ -4,12 +4,17 @@ import findInDicArray from './findInDicArray.js'
 class CourseViewerComponent extends React.Component {
   constructor(props){
     super(props);
+    let newcurrentsubsection = props.currentsubsection; //Clicked subsection has id that corresponds to the name in the JSON
+    let newcurrentsection = props.currentsection;
+    let sectionindex = findInDicArray(newcurrentsection,"name",coursesobject[props.currentlanguage].sections); //Find the index of the section where the subsection resides
+    let subsectionindex = findInDicArray(newcurrentsubsection,"name",coursesobject[props.currentlanguage].sections[sectionindex].subsections); //Find the index of the subsection inside it's section to retrieve the subsections URL
+    let newurl = coursesobject[props.currentlanguage].sections[sectionindex].subsections[subsectionindex].fileurl;
     this.state = {
       currentlanguage: props.currentlanguage,
       currentsection:props.currentsection,
       currentsubsection:props.currentsubsection,
+      currentdocurl:newurl
     }
-    console.log(this.state.currentdocurl);
     this.handleListItemClick = this.handleListItemClick.bind(this);
     this.setClassofList = this.setClassofList.bind(this);
     this.setClassofSection = this.setClassofSection.bind(this);
@@ -17,11 +22,16 @@ class CourseViewerComponent extends React.Component {
   }
   handleListItemClick(event) {
     event.persist();
-    console.log(event.target);
     this.setState((state) =>{
-
-      return {currentsubsection:event.target.id,
-      currentsection:event.target.parentElement.parentElement.id
+      let newcurrentsubsection = event.target.id; //Clicked subsection has id that corresponds to the name in the JSON
+      let newcurrentsection = event.target.parentElement.parentElement.id; //Clicked subsections granparent is the div that holds the ul, who's id corresponds to the section's name
+      let sectionindex = findInDicArray(newcurrentsection,"name",coursesobject[state.currentlanguage].sections); //Find the index of the section where the subsection resides
+      let subsectionindex = findInDicArray(newcurrentsubsection,"name",coursesobject[state.currentlanguage].sections[sectionindex].subsections); //Find the index of the subsection inside it's section to retrieve the subsections URL
+      let newurl = coursesobject[state.currentlanguage].sections[sectionindex].subsections[subsectionindex].fileurl;
+      return {
+        currentsubsection:event.target.id,
+        currentsection:event.target.parentElement.parentElement.id,
+        currentdocurl:newurl
       }
     });
   }
@@ -65,7 +75,7 @@ class CourseViewerComponent extends React.Component {
       </div>
       </div>
       <div id="coursedisplaydiv">
-      Here is where content will be displayed
+      {this.state.currentdocurl}
       </div>
       </div>
     );
