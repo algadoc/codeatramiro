@@ -6,30 +6,30 @@
       "name":"Intro to Python",
       "subsections":[{
         "name":"Intro",
-        "fileurl":"TestURL1"
+        "fileurl":"Python/Test1.html"
       },
       {
         "name":"Syntax",
-        "fileurl":"TestURL2"
+        "fileurl":"Python/Test2.html"
       },
       {
         "name":"Syntax 2",
-        "fileurl":"TestURL3"
+        "fileurl":"Python/Test1.html"
       }]
     },
     {
       "name":"Getting into it",
       "subsections":[{
         "name":"Heavy 1",
-        "fileurl":"TestURL4"
+        "fileurl":".Python/Test1.html"
       },
       {
         "name":"Heavy 2",
-        "fileurl":"TestURL5"
+        "fileurl":"../contents/Python/Test1.html"
       },
       {
         "name":"Heavy 3",
-        "fileurl":"TestURL6"
+        "fileurl":"../contents/Python/Test1.html"
       }]
     }
   ]
