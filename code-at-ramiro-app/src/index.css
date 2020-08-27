@@ -204,7 +204,7 @@ body{
 
 #languagetitle{
 	font-family: Hack;
-	font-size: min(5vw,5vh);
+	font-size: 30px;
 	margin: 10px;
 	padding:3px;
 	border-left: 3px solid black;
@@ -224,15 +224,23 @@ body{
 }
 
 .noncurrentsubsection{
-	background-color: #050505;
+	font-family: Hack;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 .currentsubsection{
-	background-color: red;
+	font-family: Hack;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #AAAAAA;
+	border: 2px solid #999999;
+	border-radius: 5px;
 }
 .noncurrentsection{
-	background-color: #050505;
+	font-family: Hack;
 }
 .currentsection{
+	font-family: Hack;
 	background-color: blue;
 }
 
