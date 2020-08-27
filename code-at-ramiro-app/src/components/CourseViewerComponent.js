@@ -1,5 +1,5 @@
 import React from 'react';
-import coursesobject from './currentcourses';
+import coursesobject from '../contents.currentcourses.json';
 import findInDicArray from './findInDicArray.js'
 class CourseViewerComponent extends React.Component {
   constructor(props){
