@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Título de la subsección</title>
+  <meta name="Autor de la página" content="Descripción del contenido">
+
+  <link rel="stylesheet" href="/contents/prism.css">
+  <link rel="stylesheet" href="/contents/contentstyling.css">
+  <script src="/contents/prism.js"></script>
+</head>
+
+<body>
+  <p>¿Como consigue la página leer los archivos con los materiales, decidir cual tiene que enseñar, y mostrar el seleccionado por el usuario?</p>
+  <p>Buena pregunta. Ni siquiera yo (Alfonso Lagares), el autor original de la página, lo comprendo completamente. Sin embargo, podemos comprender
+     lo suficiente el sistema como para añadir nuevos conenidos. Como conigue la página todo lo demas solo le importa al pobre infeliz de mantenimiento.</p>
+  <p>Para empezar, comprendamos la estructura de los archivos que llegan al cliente una vez entra en la página. Estos son los presentes en la carpeta
+    <code class="language-markup">/public</code>. Dentro, a su vez, no encontramos con este panorama:</p>
+  <pre data-start="1"><code class="language-powershell line-numbers">[alagares@localhost public]$ ls
+contents    manifest.json  prism.css  robots.txt
+index.html  pageicon.png   prism.js
+  </code>
+  </pre>
+  <p>Podemos ignorar por completo <code class="language-markup">robots.txt</code>. Eso nos dejas con los siguientes archivos:</p>
+  <ul>
+    <li><code class="language-markup">index.html</code>: Archivo HTML principal de la página. Verás que esta prácticamente vacio.
+      Esto es porque React lo genera dinámicamente. Se recomienda no tocar.</li>
+    <li><code class="language-markup">manifest.json</code>: Archivo JSON requerido por algunos buscadores, el cual contiene
+       información acerca de como cargar la página. Mejor no tocar. </li>
+    <li><code class="language-markup">pageicon.png</code>: Icono que aparece en la barra del buscador cuando carga la página. Se puede cambiar por otro png.</li>
+    <li><code class="language-markup">prism.css</code>: Archivo CSS asociado con la librería de Prismjs, la cual se usa para poder incluir código en los materiales.
+       Se explica un poco mas tarde su uso con detalle, pero por ahora es primordial saber que tiene que ser importada en todos los archivos de materiales que se suban a la página, se use o no.</li>
+    <li><code class="language-markup">prism.js</code>: Archivo JS asociado con la librería de Prismjs. Es lo que hace que el código aparezca así de bonito.
+       Está fuera de la comprensión de cualquier mortal, por lo que se desaconseja modificarla. Como su archivo CSS correspondiente, se tiene que importar en todos los materiales.</li>
+    <li><code class="language-markup">contents</code>: Esta es la carpeta que nos interesa. Guarda todos los archivos de materiales, y es primordial para el funcionamiento de la página.</li>
+  </ul>
+  <pre data-start="1"><code class="language-powershell line-numbers">[alagares@localhost public]$ cd contents/
+[alagares@localhost contents]$ ls
+C                   CSS                  HTML        prism.css  Template.html
+contentstyling.css  currentcourses.json  Javascript  prism.js
+CS101               Devs                 LaTex       Python
+  </code>
+  </pre>
+</body>
+</html>

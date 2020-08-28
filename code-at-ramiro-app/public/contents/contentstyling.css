@@ -25,6 +25,11 @@ ul {
   margin-left: 5px;
 }
 
+ul li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 pre{
   width: 70vw;
   height: auto;
