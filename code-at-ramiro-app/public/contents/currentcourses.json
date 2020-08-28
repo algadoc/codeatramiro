@@ -104,6 +104,10 @@
         {
           "name": "Como introducir imágenes",
           "fileurl": "Devs/Introducirimagenes.html"
+        },
+        {
+          "name": "Prueba de notebook",
+          "fileurl": "Devs/AneurAI_Script.ipynb"
         }
       ]
     }
