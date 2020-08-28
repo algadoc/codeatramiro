@@ -10,10 +10,12 @@ import mainlogo from './mainlogo.png'; //Main Page logo file
 import CodeAtRamiroText from './components/CodeAtRamiroText.js'; //Code at Ramiro component: fancy colored text
 import Image from './components/Image.js'; //Basic Image Component
 import Text from './components/Text.js'; //Basic Text Component
-import CourseViewerComponent from './components/CourseViewerComponent.js' //Course viewer component
-import animateElement from './components/animateElement.js' //Animate Element function, vanilla JS
-import handleCoursesButton from './components/handleCoursesButton.js' //Function that handles the transition between the main content-logo screen and the courses div
+import CourseViewerComponent from './components/CourseViewerComponent.js'; //Course viewer component
+import animateElement from './components/animateElement.js'; //Animate Element function, vanilla JS
+import handleCoursesButton from './components/handleCoursesButton.js'; //Function that handles the transition between the main content-logo screen and the courses div
 import Prism from "prismjs";
+
+Prism.highlightAll();
 
 function App() {
   return (
@@ -41,7 +43,7 @@ function App() {
       </div>
       {/*Component that actually shows the contents*/}
       {/*The coder's nightmare*/}
-      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro to Python" currentsubsection="Syntax"/>
+      <CourseViewerComponent id="courseviewercomponent" currentlanguage="2" currentsection="Introducción" currentsubsection="Breve resumen de la página"/>
     </div>
     </div>
   );
