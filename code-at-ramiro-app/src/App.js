@@ -13,7 +13,7 @@ import Text from './components/Text.js'; //Basic Text Component
 import CourseViewerComponent from './components/CourseViewerComponent.js' //Course viewer component
 import animateElement from './components/animateElement.js' //Animate Element function, vanilla JS
 import handleCoursesButton from './components/handleCoursesButton.js' //Function that handles the transition between the main content-logo screen and the courses div
-
+import Prism from "prismjs";
 
 function App() {
   return (

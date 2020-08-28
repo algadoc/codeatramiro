@@ -181,10 +181,11 @@ body{
 	width: 100%;
 	grid-template-columns: auto auto;
 	justify-content: space-evenly;
-	grid-gap: 5vw;
-	margin: 5px;
+	grid-gap: 2vw;
+	margin: 0px;
 	border-top: 5px ridge #999999;
 	border-bottom: 5px ridge #999999;
+	overflow: hidden;
 }
 
 #courseguidediv{
@@ -224,25 +225,38 @@ body{
 
 #coursedisplaydiv{
 	background: white;
-	border: 5px solid #4545454;
+	width:auto;
+	border: 5px solid black;
 	border-radius: 10px;
 	padding: 15px;
-	color: black;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#coursesdisplaydiv > *{
+#coursedisplaydiv h1{
+	font-size: 70px;
+	text-align: center;
+}
+
+#coursedisplaydiv > *{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 #coursedisplaydiv ul{
-	list-style-type: square;
+	list-style-type: circle;
 	margin-left: 5px;
 }
 
+
+#coursedisplaydiv{
+		grid-column: 2/3;
+		padding:16px;
+}
+
+
+/* Classes for selected and non-selected sections and subsections */
 .noncurrentsubsection{
 	font-family: Hack;
 	padding-top: 3px;
@@ -264,10 +278,6 @@ body{
 	background-color: blue;
 }
 
-#coursedisplaydiv{
-		grid-column: 2/3;
-		padding:16px;
-}
 
 	/* Animation Classes*/
 @keyframes fadeoutdown {

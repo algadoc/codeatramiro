@@ -1,7 +1,18 @@
 import axios from 'axios';
 import React from 'react';
 import findInDicArray from './findInDicArray.js';
+import Prism from "prismjs";
+import "./prism.css";
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
+const code = `#imdonetoday{
+  color: blood;
+  border: 600px dead human;
+}`;
+
+// Returns a highlighted HTML string
+const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+console.log(html);
 class CourseViewerComponent extends React.Component {
 
   constructor(props){
@@ -23,6 +34,7 @@ class CourseViewerComponent extends React.Component {
 
   }
   componentDidMount(){
+    Prism.highlightAll();
     axios.get('/contents/currentcourses.json')
       .then(res => {
         console.log("current courses loaded!");
@@ -115,12 +127,15 @@ class CourseViewerComponent extends React.Component {
           {languageitems}
         </div>
         </div>
-        <div id="coursedisplaydiv" dangerouslySetInnerHTML={{__html: this.state.currentdochtml}}>
+        <div id="coursedisplaydiv">
+          {ReactHtmlParser(this.state.currentdochtml)}
           </div>
       </div>
     );
   }
-
+  }
+  componentDidUpdate(){
+    Prism.highlightAll();
   }
 }
   export default CourseViewerComponent;
