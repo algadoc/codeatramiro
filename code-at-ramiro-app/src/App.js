@@ -13,7 +13,10 @@ import Text from './components/Text.js'; //Basic Text Component
 import CourseViewerComponent from './components/CourseViewerComponent.js'; //Course viewer component
 import animateElement from './components/animateElement.js'; //Animate Element function, vanilla JS
 import handleCoursesButton from './components/handleCoursesButton.js'; //Function that handles the transition between the main content-logo screen and the courses div
+import FullheightIframe from './components/FullheightIframe.js' //Smart IFrame that adjust to content height
 import Prism from "prismjs";
+
+
 
 Prism.highlightAll();
 
@@ -35,15 +38,14 @@ function App() {
           <Text id="SubLogoText" content="Grupo de programación Suí Géneris"/>
         </div>
       </div>
-      <div id="contentdiv"> {/*Div for permanent front-page content*/}
-      This is content!!!!
+      <div id ="contentdiv" className="iframe-container">
+        <FullheightIframe id ="contentiframe" className="iframe-child" src="/contents/LandingPage/index.html" title="Contenido inicial CodeAtRamiro" />
       </div>
       <div id="coursediv">{/*Div that hosts the links to courses*/}
-      This is The courses!!!!!
-      </div>
+      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro to Python" currentsubsection="Intro"/>
+    </div>
       {/*Component that actually shows the contents*/}
       {/*The coder's nightmare*/}
-      <CourseViewerComponent id="courseviewercomponent" currentlanguage="2" currentsection="Introducción" currentsubsection="Breve resumen de la página"/>
     </div>
     </div>
   );

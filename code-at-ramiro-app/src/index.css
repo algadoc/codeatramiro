@@ -51,12 +51,15 @@ table {
 /*Actual File Start*/
 body {
   background-color: #303030;
+  overflow-x: hidden;
 }
 
 #main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width:100vw;
+  overflow: hidden;
 }
 
 #toolbardiv {
@@ -161,12 +164,22 @@ body {
 }
 
 /*Ended Logo Div conditional styling*/
+
+
 #contentdiv {
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contentiframe {
+  width:100vw;
+  height: 100%;
+
 }
 
 #coursediv {
-  background-color: #131313;
   display: none;
 }
 
@@ -190,11 +203,65 @@ body {
 }
 
 
+#courseabsolutediv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#coursescomponentdiv {
+  background-color: #333333;
+  border: 4px solid #111111;
+  border-radius: 30px;
+  width: 95vw;
+  margin:10px;
+  padding:5px;
+  color:white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family:Hack;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#coursescomponentdiv > div{
+  margin-left: 20px;
+  margin-right: 20px;
+  border-right: 2px solid grey;
+  border-left: 2px solid grey;
+  padding: 5px;
+  flex: 1 1 auto
+
+}
+
+#coursescomponentdiv h2{
+  font-size: 35px;
+  margin: 15px;
+  padding:10px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+#coursescomponentdiv h3{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+
 /*Content div conditional styling*/
 @media screen and (min-width: 940px) {
   #courseviewermaindiv {
     display: grid;
-    width: 100%;
+    width: 100vw;
     height: 90vh;
     grid-template-columns: 1fr 5fr;
     justify-content: space-evenly;
@@ -202,12 +269,11 @@ body {
     margin: 0px;
     border-top: 5px ridge #999999;
     border-bottom: 5px ridge #999999;
-    overflow: hidden;
   }
 
   #courseguidediv {
     grid-column: 1/2;
-    width: min(auto, 100vw);
+    width: 16vw;
     display: flex;
     margin: 10px;
     border: 4px solid grey;
@@ -221,7 +287,7 @@ body {
 
   #languagetitle {
     font-family: Hack;
-    font-size: 30px;
+    font-size: 2.01vw;
     margin: 10px;
     padding: 3px;
     border-left: 3px solid black;
@@ -244,28 +310,25 @@ body {
 
   #coursedisplaydiv {
     background: white;
-    width: auto;
+    width: 77.4vw;
+    padding: 0px;
     border: 5px solid black;
     border-radius: 10px;
     grid-column: 2/3;
-    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
-  #coursesiframe {
-    overflow: hidden;
-    height: 100%;
+  #coursesiframe{
     width: 100%;
+    height: 100%;
   }
 }
-
 @media screen and (max-width: 940px) {
   #courseviewermaindiv {
     display: grid;
-    width: 100%;
+    width: 100vw;
     height: 90vh;
     grid-template-rows: 1fr 5fr;
     justify-content: center;
@@ -273,12 +336,11 @@ body {
     margin: 0px;
     border-top: 5px ridge #999999;
     border-bottom: 5px ridge #999999;
-    overflow: hidden;
   }
 
   #courseguidediv {
     grid-row: 1/2;
-    width: 90vw;
+    width: 95vw;
     display: flex;
     margin: 10px;
     border: 4px solid grey;
@@ -315,21 +377,20 @@ body {
 
   #coursedisplaydiv {
     background: white;
-    width: auto;
+    width: 95vw;
+    padding: 0px;
     border: 5px solid black;
     border-radius: 10px;
     grid-row: 2/3;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+  }
+  #coursesiframe {
+    width:100%;
+    height: 100%;
   }
 
-  #coursesiframe {
-    height: 100%;
-    width: 100%;
-  }
 }
 
 /* Classes for selected and non-selected sections and subsections */
@@ -354,7 +415,7 @@ body {
 
 .currentsection {
   font-family: Hack;
-  background-color: blue;
+  background-color: #111111;
 }
 
 /* Animation Classes*/

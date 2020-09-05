@@ -12,15 +12,16 @@ class CourseViewerComponent extends React.Component {
         currentlanguage: props.currentlanguage,
         currentsection: props.currentsection,
         currentsubsection: props.currentsubsection,
+        iscoursesdivdisplay: true,
         coursesobject: "none",
-        currentdocurl: "none",
-        currentdochtml: "none"
       }
       this.handleListItemClick = this.handleListItemClick.bind(this);
       this.setClassofList = this.setClassofList.bind(this);
       this.setClassofSection = this.setClassofSection.bind(this);
       this.getDocURL = this.getDocURL.bind(this);
-
+      this.handleCourseDisplay = this.handleCourseDisplay.bind(this);
+      this.handleCourseSelectorItemClick = this.handleCourseSelectorItemClick.bind(this);
+      this.handleBackDivButton = this.handleBackDivButton.bind(this);
 
     }
     componentDidMount() {
@@ -58,16 +59,37 @@ class CourseViewerComponent extends React.Component {
           currentsection: event.target.parentElement.parentElement.id
         }
       });
-      let newurl = this.getDocURL(this.state.coursesobject, this.state.currentlanguage, event.target.parentElement.parentElement.id, event.target.id);
-      this.setState({
-        currentdocurl: newurl
-      })
-      axios.get(newurl)
-        .then(res => {
-          this.setState({
-            currentdochtml: res.data
-          })
-        });
+    }
+
+    handleCourseSelectorItemClick(event) {
+      event.persist();
+      let clickedlanguage = event.target.parentElement.parentElement.parentElement.parentElement.id;
+      this.setState((state) => {
+        return {
+          currentlanguage: findInDicArray(clickedlanguage,"language",this.state.coursesobject),
+          currentsubsection: event.target.id,
+          currentsection: event.target.parentElement.parentElement.id,
+          iscoursesdivdisplay: false
+
+        }
+      });
+    }
+
+    handleBackDivButton(event){
+        this.setState((state) => {
+          return {
+            iscoursesdivdisplay: true
+          }
+        }
+    );
+  }
+    handleCourseDisplay(bool) {
+      if(bool){
+        return "grid";
+      }
+      else{
+        return "none";
+      }
     }
 
 
@@ -91,68 +113,72 @@ class CourseViewerComponent extends React.Component {
         return ( < div > < /div>);
         }
         else {
+          //Get new url for the iframe
+          let newurl = this.getDocURL(this.state.coursesobject, this.state.currentlanguage, this.state.currentsection, this.state.currentsubsection);
+          //Course List div
+          const coursesdiv = this.state.coursesobject.map((languageobject) =>
+          <div id = {languageobject.language} key = {languageobject.language} className="coursesdivlanguagediv">
+            <h2>{languageobject.language}</h2>
+            <div>
+            {languageobject.sections.map((section) =>
+              <div id = {section.name} key = {section.name}>
+                <h3> {section.name} </h3>
+                <ul> {section.subsections.map((subsection) =>
+                  <li onClick = {this.handleCourseSelectorItemClick} id = {subsection.name} key = {subsection.name} >
+                    {subsection.name}
+                  </li>
+                )}
+                </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        );
+          //Language List of course viewer
           const languageitems = this.state.coursesobject[this.state.currentlanguage].sections.map((section) =>
-            <
-            div id = {
-              section.name
-            }
-            key = {
-              section.name
-            } >
-            <
-            h3 className = {
-              this.setClassofSection(section)
-            } > {
-              section.name
-            } < /h3> <
-            ul > {
-              section.subsections.map((subsection) =>
-                <
-                li onClick = {
-                  this.handleListItemClick
-                }
-                className = {
-                  this.setClassofList(subsection)
-                }
-                id = {
-                  subsection.name
-                }
-                key = {
-                  subsection.name
-                } > {
-                  subsection.name
-                } < /li>
-              )
-            } <
-            /ul> <
-            /div>
+            <div id = {section.name} key = {section.name} >
+            <h3 className = {this.setClassofSection(section)}>
+            {section.name}
+            </h3>
+            <ul>
+              {section.subsections.map((subsection) =>
+                <li onClick = {this.handleListItemClick} className = {this.setClassofList(subsection)} id = {subsection.name} key = {subsection.name} > {subsection.name}
+                </li>
+              )}
+              </ul>
+            </div>
           );
-          return ( <
-            div id = "courseviewermaindiv" >
-            <
-            div id = "courseguidediv" >
-            <
-            h2 id = "languagetitle" > {
-              this.state.coursesobject[this.state.currentlanguage].language
-            } <
-            /h2> <
-            div id = "listnestdiv" > {
-              languageitems
-            } <
-            /div> <
-            /div> <
-            div id = "coursedisplaydiv" >
-            <
-            iframe id = "coursesiframe" src = {
-              this.state.currentdocurl
-            }
-            title = {
-              this.state.currentsubsection
-            }
-            /> <
-            /div> <
-            /div>
+          if(this.state.iscoursesdivdisplay){
+            return (
+              <div id = "courseabsolutediv">
+                <div id="coursescomponentdiv">
+                  {coursesdiv}
+                </div>
+              </div>
+            );
+          }
+        else {
+          return(
+            <div id = "courseabsolutediv">
+              <div id="coursescomponentdiv">
+                <button onClick= {this.handleBackDivButton} ></button>
+              </div>
+              <div id = "courseviewermaindiv" >
+                <div id = "courseguidediv" >
+                  <h2 id = "languagetitle" >
+                    {this.state.coursesobject[this.state.currentlanguage].language}
+                  </h2>
+                <div id = "listnestdiv" >
+                  {languageitems}
+                </div>
+              </div>
+              <div id = "coursedisplaydiv" >
+                <iframe id = "coursesiframe" src = {newurl} title = {this.state.currentsubsection}/>
+              </div>
+            </div>
+          </div>
           );
+        }
         }
       }
       componentDidUpdate() {
