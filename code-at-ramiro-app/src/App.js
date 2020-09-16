@@ -22,7 +22,7 @@ Prism.highlightAll();
 
 function App() {
   return (
-    <div>
+    <div id="appdiv">
     <div id="toolbardiv"> {/*Top toolvar, hosts return Code@Ramiro text #TODO# and courses button*/}
     <button id="coursesbutton" onClick={handleCoursesButton}>
       <p id="coursesbuttontext">Cursos</p>

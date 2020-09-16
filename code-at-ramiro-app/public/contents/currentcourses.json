@@ -1,116 +1,318 @@
 [{
-    "language": "Python",
-    "languageico": "",
-    "sections": [{
-        "name": "Intro to Python",
-        "subsections": [{
-            "name": "Intro",
-            "fileurl": "Python/Test1.html"
-          },
-          {
-            "name": "Syntax",
-            "fileurl": "Python/Test2.html"
-          },
-          {
-            "name": "Syntax 2",
-            "fileurl": "Python/index.html"
-          }
+        "language": "Python",
+        "languageico": "Python/images/pythonlogo.png",
+        "sections": [{
+                "name": "Intro to Python",
+                "subsections": [{
+                        "name": "Intro",
+                        "fileurl": "Python/Test1.html"
+                    },
+                    {
+                        "name": "Syntax",
+                        "fileurl": "Python/Test2.html"
+                    },
+                    {
+                        "name": "Syntax 2",
+                        "fileurl": "Python/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Getting into it",
+                "subsections": [{
+                        "name": "Heavy 1",
+                        "fileurl": ".Python/Test1.html"
+                    },
+                    {
+                        "name": "Heavy 2",
+                        "fileurl": "../contents/Python/Test1.html"
+                    },
+                    {
+                        "name": "Heavy 3",
+                        "fileurl": "../contents/Python/Test1.html"
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "name": "Getting into it",
-        "subsections": [{
-            "name": "Heavy 1",
-            "fileurl": ".Python/Test1.html"
-          },
-          {
-            "name": "Heavy 2",
-            "fileurl": "../contents/Python/Test1.html"
-          },
-          {
-            "name": "Heavy 3",
-            "fileurl": "../contents/Python/Test1.html"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "language": "Javascript",
-    "languageico": "",
-    "sections": [{
-        "name": "Intro to Javascript",
-        "subsections": [{
-            "name": "Intro",
-            "fileurl": "TestURL1"
-          },
-          {
-            "name": "Syntax",
-            "fileurl": "TestURL2"
-          },
-          {
-            "name": "Syntax 2",
-            "fileurl": "TestURL3"
-          }
-        ]
-      },
-      {
-        "name": "Getting into it",
-        "subsections": [{
-            "name": "Heavy 1",
-            "fileurl": "TestURL4"
-          },
-          {
-            "name": "Heavy 2",
-            "fileurl": "TestURL5"
-          },
-          {
-            "name": "Heavy 3",
-            "fileurl": "TestURL6"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "language": "#Developers",
-    "languageico": "",
-    "sections": [{
-      "name": "Introducción",
-      "subsections": [{
-          "name": "Breve resumen de la página",
-          "fileurl": "Devs/Breveresumen.html"
-        },
-        {
-          "name": "Funcionamiento",
-          "fileurl": "Devs/Functionamiento.html"
-        },
-        {
-          "name": "El sistema de materiales",
-          "fileurl": "Devs/Sistemademateriales.html"
-        }
-      ]
     },
     {
-      "name": "Como crear contenidos",
-      "subsections": [{
-          "name": "Template: ejemplos y uso",
-          "fileurl": "Devs/Templateejemplosyusos.html"
-        },
-        {
-          "name": "Como introducir código",
-          "fileurl": "Devs/Introducircódigo.html"
-        },
-        {
-          "name": "Como introducir imágenes",
-          "fileurl": "Devs/Introducirimagenes.html"
-        },
-        {
-          "name": "Prueba de notebook",
-          "fileurl": "Devs/AneurAI_Script.ipynb"
-        }
-      ]
+        "language": "Java",
+        "languageico": "Java/images/javaicon.png",
+        "sections": [{
+                "name": "Intro to Java",
+                "subsections": [{
+                    "name": "What is Java?",
+                    "fileurl": "Java/Javascript1.html"
+                }]
+            }
+
+        ]
+    }, {
+        "language": "JavaScript",
+        "languageico": "Javascript/images/javascriptico.png",
+        "sections": [{
+                "name": "Intro to Javascript",
+                "subsections": [{
+                    "name": "What is Java?",
+                    "fileurl": "Java/Javascript1.html"
+                }]
+            }
+
+        ]
+    },
+    {
+        "language": "#Developers",
+        "languageico": "Devs/images/developersicon.png",
+        "sections": [{
+                "name": "Introducción",
+                "subsections": [{
+                        "name": "Breve resumen de la página",
+                        "fileurl": "Devs/Breveresumen.html"
+                    },
+                    {
+                        "name": "Funcionamiento",
+                        "fileurl": "Devs/Functionamiento.html"
+                    },
+                    {
+                        "name": "El sistema de materiales",
+                        "fileurl": "Devs/Sistemademateriales.html"
+                    }
+                ]
+            },
+            {
+                "name": "Como crear contenidos",
+                "subsections": [{
+                        "name": "Template: ejemplos y uso",
+                        "fileurl": "Devs/Templateejemplosyusos.html"
+                    },
+                    {
+                        "name": "Como introducir código",
+                        "fileurl": "Devs/Introducircódigo.html"
+                    },
+                    {
+                        "name": "Como introducir imágenes",
+                        "fileurl": "Devs/Introducirimagenes.html"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "language": "#Developers",
+        "languageico": "Devs/images/developersicon.png",
+        "sections": [{
+                "name": "Introducción",
+                "subsections": [{
+                        "name": "Breve resumen de la página",
+                        "fileurl": "Devs/Breveresumen.html"
+                    },
+                    {
+                        "name": "Funcionamiento",
+                        "fileurl": "Devs/Functionamiento.html"
+                    },
+                    {
+                        "name": "El sistema de materiales",
+                        "fileurl": "Devs/Sistemademateriales.html"
+                    }
+                ]
+            },
+            {
+                "name": "Como crear contenidos",
+                "subsections": [{
+                        "name": "Template: ejemplos y uso",
+                        "fileurl": "Devs/Templateejemplosyusos.html"
+                    },
+                    {
+                        "name": "Como introducir código",
+                        "fileurl": "Devs/Introducircódigo.html"
+                    },
+                    {
+                        "name": "Como introducir imágenes",
+                        "fileurl": "Devs/Introducirimagenes.html"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "language": "#Developers",
+        "languageico": "Devs/images/developersicon.png",
+        "sections": [{
+                "name": "Introducción",
+                "subsections": [{
+                        "name": "Breve resumen de la página",
+                        "fileurl": "Devs/Breveresumen.html"
+                    },
+                    {
+                        "name": "Funcionamiento",
+                        "fileurl": "Devs/Functionamiento.html"
+                    },
+                    {
+                        "name": "El sistema de materiales",
+                        "fileurl": "Devs/Sistemademateriales.html"
+                    }
+                ]
+            },
+            {
+                "name": "Como crear contenidos",
+                "subsections": [{
+                        "name": "Template: ejemplos y uso",
+                        "fileurl": "Devs/Templateejemplosyusos.html"
+                    },
+                    {
+                        "name": "Como introducir código",
+                        "fileurl": "Devs/Introducircódigo.html"
+                    },
+                    {
+                        "name": "Como introducir imágenes",
+                        "fileurl": "Devs/Introducirimagenes.html"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    },
+                    {
+                        "name": "Prueba de notebook",
+                        "fileurl": "Devs/AneurAI_Script.ipynb"
+                    }
+                ]
+            }
+        ]
     }
-  ]
-}
 ]

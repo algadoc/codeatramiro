@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import findInDicArray from './findInDicArray.js';
 import Prism from "prismjs";
+import animateElement from './animateElement.js'
 import './prism.css'
 
 class CourseViewerComponent extends React.Component {
@@ -70,17 +71,27 @@ class CourseViewerComponent extends React.Component {
           currentsubsection: event.target.id,
           currentsection: event.target.parentElement.parentElement.id,
           iscoursesdivdisplay: false
-
         }
       });
+      animateElement("coursenavigatordiv","fadeoutup","flex","none",990);
+      animateElement("courseviewerandbuttondiv","fadeinup","flex","flex",990);
+
     }
 
     handleBackDivButton(event){
         this.setState((state) => {
-          return {
-            iscoursesdivdisplay: true
+          if (state.iscoursesdivdisplay == true){
+
+          }
+          else{
+            animateElement("courseviewerandbuttondiv","fadeoutdown","flex","none",990);
+            animateElement("coursenavigatordiv","fadeindown","flex","flex",990);
+            return {
+              iscoursesdivdisplay: true
+            }
           }
         }
+        
     );
   }
     handleCourseDisplay(bool) {
@@ -110,7 +121,7 @@ class CourseViewerComponent extends React.Component {
 
     render() {
       if (this.state.coursesobject === "none" | this.state.currentdochtml === "none") {
-        return ( < div > < /div>);
+        return ( <div> </div>);
         }
         else {
           //Get new url for the iframe
@@ -118,7 +129,10 @@ class CourseViewerComponent extends React.Component {
           //Course List div
           const coursesdiv = this.state.coursesobject.map((languageobject) =>
           <div id = {languageobject.language} key = {languageobject.language} className="coursesdivlanguagediv">
-            <h2>{languageobject.language}</h2>
+            <div className="coursenavigatortitleandlogo">
+              <h2>{languageobject.language}</h2>
+              <img src={"contents/"+languageobject.languageico} alt={"ico of" + languageobject.language}></img>
+            </div>
             <div>
             {languageobject.sections.map((section) =>
               <div id = {section.name} key = {section.name}>
@@ -148,37 +162,37 @@ class CourseViewerComponent extends React.Component {
               </ul>
             </div>
           );
-          if(this.state.iscoursesdivdisplay){
-            return (
-              <div id = "courseabsolutediv">
-                <div id="coursescomponentdiv">
-                  {coursesdiv}
-                </div>
-              </div>
-            );
-          }
-        else {
+
           return(
             <div id = "courseabsolutediv">
               <div id="coursescomponentdiv">
-                <button onClick= {this.handleBackDivButton} ></button>
-              </div>
-              <div id = "courseviewermaindiv" >
-                <div id = "courseguidediv" >
-                  <h2 id = "languagetitle" >
-                    {this.state.coursesobject[this.state.currentlanguage].language}
-                  </h2>
-                <div id = "listnestdiv" >
-                  {languageitems}
+                <div id= "coursenavigatordiv">
+                  {coursesdiv}
                 </div>
               </div>
-              <div id = "coursedisplaydiv" >
-                <iframe id = "coursesiframe" src = {newurl} title = {this.state.currentsubsection}/>
+              <div id="courseviewerandbuttondiv" style={{display: "none"}}>
+                <button id="returntocoursesbutton" onClick= {this.handleBackDivButton}>
+                    <p id="returntocoursesbuttontext"> Volver a los cursos</p>
+                </button>
+                <div id = "courseviewermaindiv" >
+                  <div id = "courseguidediv" >
+                    <div id= "courseviewerguidetitleandimage">
+                      <h2 id = "languagetitle" >
+                        {this.state.coursesobject[this.state.currentlanguage].language}
+                      </h2>
+                      <img src={"contents/"+this.state.coursesobject[this.state.currentlanguage].languageico} alt={"ico of" + this.state.coursesobject[this.state.currentlanguage].language}></img>
+                    </div>
+                    <div id = "listnestdiv" >
+                      {languageitems}
+                    </div>
+                  </div>
+                  <div id = "coursedisplaydiv" >
+                    <iframe id = "coursesiframe" src = {newurl} title = {this.state.currentsubsection} allow={"fullscreen"}/>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
           );
-        }
         }
       }
       componentDidUpdate() {

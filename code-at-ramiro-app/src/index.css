@@ -1,486 +1,698 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
 
-ol, ul {
-  list-style: none;
+ol,
+ul {
+    list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
 /*Actual File Start*/
+
 body {
-  background-color: #303030;
-  overflow-x: hidden;
+    background-color: #303030;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+#appdiv {
+    height: 100vh;
 }
 
 #main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width:100vw;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
 }
 
 #toolbardiv {
-  width: 100%;
-  height: auto;
-  border-bottom: 4px outset #050505;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-  position: sticky;
-  left: 0;
-  top: -0.1px;
-  background-color: #333333;
+    width: 100%;
+    height: auto;
+    border-bottom: 4px outset #050505;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    position: sticky;
+    left: 0;
+    top: -0.1px;
+    background-color: #333333;
+    z-index: 10;
 }
 
 #toolbartext {
-  grid-column: 2/3;
-  align-self: center;
-  text-align: center;
+    grid-column: 2/3;
+    align-self: center;
+    text-align: center;
 }
 
+
 /*Logo Div Conditional Styling*/
+
 @media screen and (min-width: 700px) {
-  #logodiv {
-    display: grid;
-    grid-template-columns: auto auto;
+    #logodiv {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100vw;
+        height: 40vh;
+        grid-gap: 5%;
+        background-color: #202020;
+        border-bottom: 8px groove #101010;
+        justify-content: space-evenly;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    #MainLogoImage {
+        grid-column: 1/2;
+        align-self: center;
+        height: min(38vh, 38vw);
+    }
+    #logotextdiv {
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #MainLogoText {
+        font-size: 7vw;
+        margin: 5vh;
+    }
+    #SubLogoText {
+        font-size: 2.5vw;
+        color: white;
+        font-family: Hack;
+        margin-bottom: 4vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #logodiv {
+        display: grid;
+        grid-template-rows: auto auto;
+        width: 100vw;
+        height: auto;
+        grid-gap: 2%;
+        background-color: #202020;
+        border-bottom: 8px groove #101010;
+        justify-items: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    #MainLogoImage {
+        align-self: center;
+        height: 20vh;
+    }
+    #logotextdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #MainLogoText {
+        font-size: 10vw;
+        margin: 1vh;
+    }
+    #SubLogoText {
+        font-size: 5vw;
+        color: white;
+        font-family: Hack;
+        margin-bottom: 3vh
+    }
+}
+
+
+/*Ended Logo Div conditional styling*/
+
+#contentdiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contentiframe {
     width: 100vw;
-    height: 40vh;
-    grid-gap: 5%;
-    background-color: #202020;
-    border-bottom: 8px groove #101010;
-    justify-content: space-evenly;
+    height: 100%;
+}
+
+#coursediv {
+    display: none;
+    z-index: 5;
+}
+
+#coursesbutton {
+    align-self: left;
+    display: grid;
+    width: 90px;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    margin: 3px;
+    font-family: Hack;
+    background-color: #404040;
+    border: 2px solid #202020;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+}
+
+#coursesbuttonarrow {
+    margin-right: -37px;
+}
+
+#courseabsolutediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#coursescomponentdiv {
+    width: 95vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Hack;
+    overflow: hidden;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-  }
+}
 
-  #MainLogoImage {
-    grid-column: 1/2;
+#coursenavigatordiv>div {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+    padding: 5px;
+    flex: 1 1 auto
+}
+
+#coursenavigatordiv h2 {
+    font-size: 45px;
+    margin: 15px;
+    padding: 10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#coursenavigatordiv h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#coursenavigatordiv ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+#coursenavigatordiv li {
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    padding-left: 0px;
+}
+
+#coursenavigatordiv {
+    margin-top: 5px;
+    background-color: #333333;
+    border: 4px solid #111111;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.coursenavigatortitleandlogo {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.coursenavigatortitleandlogo h2 {
+    font-family: Hack;
+    font-size: 45px;
+}
+
+.coursenavigatortitleandlogo img {
+    float: right;
     align-self: center;
-    height: min(38vh, 38vw);
-  }
+    justify-self: center;
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+}
 
-  #logotextdiv {
-    grid-column: 2/3;
+#courseviewerandbuttondiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  #MainLogoText {
-    font-size: 7vw;
-    margin: 5vh;
-  }
-
-  #SubLogoText {
-    font-size: 2.5vw;
-    color: white;
-    font-family: Hack;
-    margin-bottom: 4vh;
-  }
 }
 
-@media screen and (max-width: 700px) {
-  #logodiv {
-    display: grid;
-    grid-template-rows: auto auto;
-    width: 100vw;
-    height: auto;
-    grid-gap: 2%;
-    background-color: #202020;
-    border-bottom: 8px groove #101010;
-    justify-items: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  #MainLogoImage {
+#returntocoursesbutton {
+    font-size: 15px;
+    font-family: Hack;
+    padding: 10px;
+    color: white;
     align-self: center;
-    height: 20vh;
-  }
-
-  #logotextdiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #MainLogoText {
-    font-size: 10vw;
-    margin: 1vh;
-  }
-
-  #SubLogoText {
-    font-size: 5vw;
-    color: white;
-    font-family: Hack;
-    margin-bottom: 3vh
-  }
+    align-content: center;
+    border: 2px solid black;
+    background-color: #333333;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-/*Ended Logo Div conditional styling*/
-
-
-#contentdiv {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#contentiframe {
-  width:100vw;
-  height: 100%;
-
-}
-
-#coursediv {
-  display: none;
-}
-
-#coursesbutton {
-  align-self: left;
-  display: grid;
-  width: 90px;
-  grid-template-columns: auto auto;
-  justify-content: left;
-  margin: 3px;
-  font-family: Hack;
-  background-color: #404040;
-  border: 2px solid #202020;
-  border-radius: 30px;
-  color: white;
-  outline: none;
-}
-
-#coursesbuttonarrow {
-  margin-right: -37px;
-}
-
-
-#courseabsolutediv{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#coursescomponentdiv {
-  background-color: #333333;
-  border: 4px solid #111111;
-  border-radius: 30px;
-  width: 95vw;
-  margin:10px;
-  padding:5px;
-  color:white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-family:Hack;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-#coursescomponentdiv > div{
-  margin-left: 20px;
-  margin-right: 20px;
-  border-right: 2px solid grey;
-  border-left: 2px solid grey;
-  padding: 5px;
-  flex: 1 1 auto
-
-}
-
-#coursescomponentdiv h2{
-  font-size: 35px;
-  margin: 15px;
-  padding:10px;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-}
-
-#coursescomponentdiv h3{
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-top: 2px solid grey;
-  border-bottom: 2px solid grey;
-  padding-top: 3px;
-  padding-bottom: 3px;
+#returntocoursesbuttontext {
+    align-self: center;
+    text-align: center;
 }
 
 
 /*Content div conditional styling*/
+
 @media screen and (min-width: 940px) {
-  #courseviewermaindiv {
-    display: grid;
-    width: 100vw;
-    height: 90vh;
-    grid-template-columns: 1fr 5fr;
-    justify-content: space-evenly;
-    grid-gap: 2vw;
-    margin: 0px;
-    border-top: 5px ridge #999999;
-    border-bottom: 5px ridge #999999;
-  }
-
-  #courseguidediv {
-    grid-column: 1/2;
-    width: 16vw;
-    display: flex;
-    margin: 10px;
-    border: 4px solid grey;
-    flex-direction: column;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    color: white;
-    padding: 5px
-  }
-
-  #languagetitle {
-    font-family: Hack;
-    font-size: 2.01vw;
-    margin: 10px;
-    padding: 3px;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-  }
-
-  #listnestdiv>div>h3 {
-    margin: 3px;
-    padding: 3px;
-    border-top: 2px solid #BBBBBB;
-    border-bottom: 2px solid #BBBBBB;
-  }
-
-  #listnestdiv>div>ul {
-    list-style-type: square;
-    margin-left: 20px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-  }
-
-  #coursedisplaydiv {
-    background: white;
-    width: 77.4vw;
-    padding: 0px;
-    border: 5px solid black;
-    border-radius: 10px;
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #coursesiframe{
-    width: 100%;
-    height: 100%;
-  }
+    #courseviewermaindiv {
+        display: grid;
+        width: 100vw;
+        height: 90vh;
+        grid-template-columns: 1fr 5fr;
+        justify-content: space-evenly;
+        grid-gap: 2vw;
+        margin: 0px;
+        border-top: 5px ridge #999999;
+        border-bottom: 5px ridge #999999;
+    }
+    #courseguidediv {
+        grid-column: 1/2;
+        width: auto;
+        display: flex;
+        margin: 10px;
+        border: 4px solid grey;
+        flex-direction: column;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        color: white;
+        padding: 5px
+    }
+    #languagetitle {
+        font-family: Hack;
+        font-size: 2.01vw;
+        margin: 10px;
+        padding: 3px;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+    }
+    #courseviewerguidetitleandimage {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    #courseviewerguidetitleandimage img {
+        height: 2.01vw;
+        align-self: center;
+        justify-self: center;
+    }
+    #listnestdiv>div>h3 {
+        margin: 3px;
+        padding: 3px;
+        border-top: 2px solid #BBBBBB;
+        border-bottom: 2px solid #BBBBBB;
+    }
+    #listnestdiv>div>ul {
+        list-style-type: square;
+        margin-left: 20px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    #coursedisplaydiv {
+        background: white;
+        width: 77.4vw;
+        padding: 0px;
+        border: 5px solid black;
+        border-radius: 10px;
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #coursesiframe {
+        width: 100%;
+        height: 100%;
+    }
 }
+
 @media screen and (max-width: 940px) {
-  #courseviewermaindiv {
-    display: grid;
-    width: 100vw;
-    height: 90vh;
-    grid-template-rows: 1fr 5fr;
-    justify-content: center;
-    grid-gap: 2vw;
-    margin: 0px;
-    border-top: 5px ridge #999999;
-    border-bottom: 5px ridge #999999;
-  }
-
-  #courseguidediv {
-    grid-row: 1/2;
-    width: 95vw;
-    display: flex;
-    margin: 10px;
-    border: 4px solid grey;
-    flex-direction: column;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    color: white;
-    padding: 5px
-  }
-
-  #languagetitle {
-    font-family: Hack;
-    font-size: 30px;
-    margin: 10px;
-    padding: 3px;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-  }
-
-  #listnestdiv>div>h3 {
-    margin: 3px;
-    padding: 3px;
-    border-top: 2px solid #BBBBBB;
-    border-bottom: 2px solid #BBBBBB;
-  }
-
-  #listnestdiv>div>ul {
-    list-style-type: square;
-    margin-left: 20px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-  }
-
-  #coursedisplaydiv {
-    background: white;
-    width: 95vw;
-    padding: 0px;
-    border: 5px solid black;
-    border-radius: 10px;
-    grid-row: 2/3;
-    align-self: center;
-    justify-self: center;
-    height: 100%;
-  }
-  #coursesiframe {
-    width:100%;
-    height: 100%;
-  }
-
+    #courseviewermaindiv {
+        display: grid;
+        width: 100vw;
+        height: auto;
+        grid-template-rows: 1fr 5fr;
+        justify-content: center;
+        grid-gap: 2vw;
+        margin: 0px;
+        border-top: 5px ridge #999999;
+        border-bottom: 5px ridge #999999;
+    }
+    #courseguidediv {
+        grid-row: 1/2;
+        width: auto;
+        display: flex;
+        margin: 10px;
+        border: 4px solid grey;
+        flex-direction: column;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        color: white;
+        padding: 5px
+    }
+    #languagetitle {
+        font-family: Hack;
+        font-size: 30px;
+        margin: 10px;
+        padding: 3px;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+    }
+    #courseviewerguidetitleandimage {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    #courseviewerguidetitleandimage img {
+        height: 50px;
+        align-self: center;
+        justify-self: center;
+    }
+    #listnestdiv>div>h3 {
+        margin: 3px;
+        padding: 3px;
+        border-top: 2px solid #BBBBBB;
+        border-bottom: 2px solid #BBBBBB;
+    }
+    #listnestdiv>div>ul {
+        list-style-type: square;
+        margin-left: 20px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    #coursedisplaydiv {
+        background: white;
+        width: 95vw;
+        padding: 0px;
+        border: 5px solid black;
+        border-radius: 10px;
+        grid-row: 2/3;
+        align-self: center;
+        justify-self: center;
+        height: 100%;
+    }
+    #coursesiframe {
+        width: 100%;
+        height: 100%;
+    }
 }
+
 
 /* Classes for selected and non-selected sections and subsections */
+
 .noncurrentsubsection {
-  font-family: Hack;
-  padding-top: 3px;
-  padding-bottom: 3px;
+    font-family: Hack;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .currentsubsection {
-  font-family: Hack;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  background-color: #AAAAAA;
-  border: 2px solid #999999;
-  border-radius: 5px;
+    font-family: Hack;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #AAAAAA;
+    border: 2px solid #999999;
+    border-radius: 5px;
 }
 
 .noncurrentsection {
-  font-family: Hack;
+    font-family: Hack;
 }
 
 .currentsection {
-  font-family: Hack;
-  background-color: #111111;
+    font-family: Hack;
+    background-color: #111111;
 }
 
-/* Animation Classes*/
-@keyframes fadeoutdown {
-  0% {
-    opacity: 1;
-    top: 0px;
-  }
 
-  100% {
-    opacity: 0;
-    top: 100vh;
-  }
+/* Animation Classes*/
+
+@keyframes fadeoutdown {
+    0% {
+        opacity: 1;
+        top: 0px;
+    }
+    100% {
+        opacity: 0;
+        top: 100vh;
+    }
 }
 
 @keyframes fadeinup {
-  0% {
-    opacity: 0;
-    top: 100vh;
-  }
-
-  100% {
-    opacity: 1;
-    top: 0px;
-  }
+    0% {
+        opacity: 0;
+        top: 100vh;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
 }
 
 @keyframes rotatedown {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(90deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
 }
 
 @keyframes rotateup {
-  0% {
-    transform: rotate(90deg);
-  }
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
-  100% {
-    transform: rotate(0deg);
-  }
+@keyframes fadeoutup {
+    0% {
+        opacity: 1;
+        top: 0px;
+    }
+    100% {
+        opacity: 1;
+        top: -100vh;
+    }
+}
+
+@keyframes fadeindown {
+    0% {
+        opacity: 1;
+        top: -100vh;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
 }
 
 .rotatedown {
-  animation-name: rotatedown !important;
-  animation-duration: 2s !important;
+    animation-name: rotatedown !important;
+    animation-duration: 2s !important;
 }
 
 .rotateup {
-  animation-name: rotateup !important;
-  animation-duration: 2s !important;
+    animation-name: rotateup !important;
+    animation-duration: 2s !important;
 }
 
 .fadeoutdown {
-  position: relative !important;
-  animation-name: fadeoutdown !important;
-  animation-duration: 1s !important;
+    position: relative !important;
+    animation-name: fadeoutdown !important;
+    animation-duration: 1s !important;
 }
 
 .fadeinup {
-  position: relative !important;
-  animation-name: fadeinup !important;
-  animation-duration: 2s !important;
+    position: relative !important;
+    animation-name: fadeinup !important;
+    animation-duration: 2s !important;
+}
+
+.fadeoutup {
+    position: relative !important;
+    animation-name: fadeoutup !important;
+    animation-duration: 1s !important;
+}
+
+.fadeindown {
+    position: relative !important;
+    animation-name: fadeindown !important;
+    animation-duration: 1s !important;
 }
