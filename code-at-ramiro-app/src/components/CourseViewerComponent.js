@@ -80,7 +80,7 @@ class CourseViewerComponent extends React.Component {
 
     handleBackDivButton(event){
         this.setState((state) => {
-          if (state.iscoursesdivdisplay == true){
+          if (state.iscoursesdivdisplay === true){
 
           }
           else{

@@ -11,7 +11,6 @@ import CodeAtRamiroText from './components/CodeAtRamiroText.js'; //Code at Ramir
 import Image from './components/Image.js'; //Basic Image Component
 import Text from './components/Text.js'; //Basic Text Component
 import CourseViewerComponent from './components/CourseViewerComponent.js'; //Course viewer component
-import animateElement from './components/animateElement.js'; //Animate Element function, vanilla JS
 import handleCoursesButton from './components/handleCoursesButton.js'; //Function that handles the transition between the main content-logo screen and the courses div
 import FullheightIframe from './components/FullheightIframe.js' //Smart IFrame that adjust to content height
 import Prism from "prismjs";
