@@ -338,16 +338,27 @@ body {
 
 #coursenavigatordiv h2 {
     font-size: 45px;
+    font-family: Hack;
     margin: 15px;
     padding: 10px;
     border-left: 2px solid black;
     border-right: 2px solid black;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 #coursenavigatordiv h3 {
     font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border-top: 2px solid grey;
     border-bottom: 2px solid grey;
     padding-top: 3px;
@@ -382,11 +393,6 @@ body {
 .coursenavigatortitleandlogo {
     display: grid;
     grid-template-columns: auto auto;
-}
-
-.coursenavigatortitleandlogo h2 {
-    font-family: Hack;
-    font-size: 45px;
 }
 
 .coursenavigatortitleandlogo img {
@@ -608,14 +614,14 @@ body {
     }
     100% {
         opacity: 0;
-        top: 100vh;
+        top: 300vh;
     }
 }
 
 @keyframes fadeinup {
     0% {
         opacity: 0;
-        top: 100vh;
+        top: 300vh;
     }
     100% {
         opacity: 1;
@@ -648,14 +654,14 @@ body {
     }
     100% {
         opacity: 1;
-        top: -100vh;
+        top: -300vh;
     }
 }
 
 @keyframes fadeindown {
     0% {
         opacity: 1;
-        top: -100vh;
+        top: -300vh;
     }
     100% {
         opacity: 1;
