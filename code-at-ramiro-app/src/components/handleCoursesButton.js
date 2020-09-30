@@ -26,7 +26,7 @@ function handleCoursesButton(event) {
                 //(A little extra time after each transition helps with assyncrony)
             }, 1000);
         } else { //If the courses div should be removed
-            animateElement("coursediv", "fadeoutdown", "flex", "none", 1000); //Fades out the courses div
+            animateElement("coursediv", "fadeoutdown", "flex", "none", 980); //Fades out the courses div
             animateElement("coursesbuttonarrow", "rotateup", "block", "block", 2000); //Rotates the arrow back
             document.getElementById("coursesbuttonarrow").style.transform = "rotate(0deg)"; //Keeps the arrow frmo rotating back
             setTimeout(() => {
