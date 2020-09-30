@@ -3,40 +3,85 @@ body {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    width: 100vw;
+    margin: 0px;
 }
 
-.twocolumns31 {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto;
+p {
+    color: white;
+    font-family: Hack;
+    font-size: medium;
 }
 
-.twocolumns:nth-child(1) {
-    grid-column: 1/2;
+h4 {
+    color: white;
+    font-family: Hack;
+    font-size: larger;
+    font-weight: 300;
 }
 
-.twocolumns:nth-child(2) {
-    grid-column: 2/3;
+@media screen and (min-width: 770px) {
+    .twocolumns31 {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+    }
+    .twocolumns:nth-child(1) {
+        grid-column: 1/2;
+    }
+    .twocolumns:nth-child(2) {
+        grid-column: 2/3;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .twocolumns31 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+    }
 }
 
 .elementdiv {
-    background-color: #333333;
+    background-color: #303030;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    justify-self: center;
+    align-self: center;
     justify-content: left;
     border-left: 2px solid grey;
     border-right: 2px solid grey;
+    width: 95%;
 }
 
 .title {
     color: white;
     font-family: Hack;
     font-size: xx-large;
-    border-top: 2px solid white;
     border-bottom: 2px solid white;
     width: fit-content;
     padding: 5px;
+}
+
+.majortitle {
+    color: white;
+    font-family: Hack;
+    font-size: 40px;
+    border-bottom: 2px solid white;
+    width: fit-content;
+    padding: 5px;
+}
+
+.divisor {
+    width: 98%;
+    height: 2px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #calendariframe {

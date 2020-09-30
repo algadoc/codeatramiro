@@ -12,7 +12,6 @@ import Image from './components/Image.js'; //Basic Image Component
 import Text from './components/Text.js'; //Basic Text Component
 import CourseViewerComponent from './components/CourseViewerComponent.js'; //Course viewer component
 import handleCoursesButton from './components/handleCoursesButton.js'; //Function that handles the transition between the main content-logo screen and the courses div
-import FullheightIframe from './components/FullheightIframe.js' //Smart IFrame that adjust to content height
 import Prism from "prismjs";
 
 
@@ -38,7 +37,7 @@ function App() {
         </div>
       </div>
       <div id ="contentdiv" className="iframe-container">
-        <FullheightIframe id ="contentiframe" className="iframe-child" src="/contents/LandingPage/index.html" title="Contenido inicial CodeAtRamiro" />
+        <iframe id ="contentiframe" className="iframe-child" src="/contents/LandingPage/index.html" title="Contenido inicial CodeAtRamiro" />
       </div>
       <div id="coursediv">{/*Div that hosts the links to courses*/}
       <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro to Python" currentsubsection="Intro"/>

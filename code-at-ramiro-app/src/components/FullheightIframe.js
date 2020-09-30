@@ -14,7 +14,7 @@ export default class FullheightIframe extends Component {
     render() {
         return ( <
             iframe style = {
-                { width: '90%', height: this.state.iFrameHeight, overflow: 'hidden', alignself: 'center' }
+                { width: '100%', height: this.state.iFrameHeight, overflow: 'auto', alignself: 'center' }
             }
             onLoad = {
                 () => {
@@ -26,7 +26,7 @@ export default class FullheightIframe extends Component {
             }
             ref = "iframe"
             src = { this.state.source }
-            width = "90%"
+            width = "100%"
             height = { this.state.iFrameHeight }
             scrolling = "no"
             frameBorder = "0"
@@ -34,4 +34,5 @@ export default class FullheightIframe extends Component {
             / >
         );
     }
+
 }

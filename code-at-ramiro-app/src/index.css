@@ -274,11 +274,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 #contentiframe {
     width: 100vw;
-    height: 100%;
+    overflow: visible;
 }
 
 #coursediv {
@@ -438,7 +439,7 @@ body {
     #courseviewermaindiv {
         display: grid;
         width: 100vw;
-        height: 90vh;
+        height: 85vh;
         grid-template-columns: 1fr 5fr;
         justify-content: space-evenly;
         grid-gap: 2vw;
@@ -457,7 +458,8 @@ body {
         -moz-user-select: none;
         user-select: none;
         color: white;
-        padding: 5px
+        padding: 5px;
+        overflow-y: scroll;
     }
     #languagetitle {
         font-family: Hack;
