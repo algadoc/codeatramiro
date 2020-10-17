@@ -278,8 +278,8 @@ body {
 }
 
 #contentiframe {
-    width: 100vw;
-    overflow: visible;
+    width: 97vw;
+    overflow-x: hidden;
 }
 
 #coursediv {
@@ -379,6 +379,10 @@ body {
     padding-left: 0px;
 }
 
+#coursenavigatordiv li:hover {
+    text-decoration: underline;
+}
+
 #coursenavigatordiv {
     margin-top: 5px;
     background-color: #333333;
@@ -470,8 +474,15 @@ body {
         border-right: 3px solid black;
     }
     #courseviewerguidetitleandimage {
-        display: grid;
-        grid-template-columns: auto auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: left;
+    }
+    #courseviewerguidetitleandimage h2 {
+        margin-right: 5px;
+        margin-left: 5px;
     }
     #courseviewerguidetitleandimage img {
         height: 2.01vw;

@@ -40,7 +40,7 @@ function App() {
         <iframe id ="contentiframe" className="iframe-child" src="/contents/LandingPage/index.html" title="Contenido inicial CodeAtRamiro" />
       </div>
       <div id="coursediv">{/*Div that hosts the links to courses*/}
-      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro to Python" currentsubsection="Intro"/>
+      <CourseViewerComponent id="courseviewercomponent" currentlanguage="0" currentsection="Intro - ¿Qué es Python?" currentsubsection="¿Qué es Python?"/>
     </div>
       {/*Component that actually shows the contents*/}
       {/*The coder's nightmare*/}
