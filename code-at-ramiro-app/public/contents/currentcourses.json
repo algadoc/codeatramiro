@@ -5,17 +5,67 @@
         "name": "Intro - ¿Qué es Python?",
         "subsections": [{
                 "name": "¿Qué es Python?",
-                "fileurl": "Python/QueesPython.html"
+                "fileurl": "Python/Intro/QueesPython.html"
             },
             {
                 "name": "La máquina virtual de Python",
-                "fileurl": "Python/MaquinaVirtualPython.html"
+                "fileurl": "Python/Intro/MaquinaVirtualPython.html"
             },
             {
                 "name": "La consola de Python",
-                "fileurl": "Python/ConsolaPython.html"
+                "fileurl": "Python/Intro/ConsolaPython.html"
             }
-        ]
+        ]},{
+        "name": "Hello world y comandos básicos",
+        "subsections": [{
+            "name": "Print()",
+            "fileurl": "Python/HelloWorld/Print.html"
+        },{
+            "name": "Input()",
+            "fileurl": "Python/HelloWorld/Input.html"
+        },{
+            "name": "Help()",
+            "fileurl": "Python/HelloWorld/Help.html"
+        },{
+            "name":"Comentarios",
+            "fileurl":"Python/HelloWorld/Comentarios.html"
+        }
+        ]},{
+        "name": "Variables",
+        "subsections":[{
+            "name": "¿Qué es una variable?",
+            "fileurl": "Python/Variables/QueesVariables.html"
+        },{
+            "name": "Integers y Floats",
+            "fileurl": "Python/Variables/Integersyfloats.html"
+        },{
+            "name": "Strings",
+            "fileurl": "Python/Variables/Strings.html"
+        },{
+            "name": "Arrays (listas)",
+            "fileurl": "Python/Variables/Arrays.html"
+        },{
+            "name": "Diccionarios",
+            "fileurl": "Python/Variables/Dics.html"
+        },{
+            "name": "Tuplas",
+            "fileurl": "Python/Variables/Tuplas.html"
+        },{
+            "name": "Sets",
+            "fileurl": "Python/Variables/Sets.html"
+        }]
+    },{
+        "name": "Bools y Ifs",
+        "subsections":[{
+            "name": "¿Qué es un booleano?",
+            "fileurl": "Python/Bools/QueesBooleano.html"
+        },{
+            "name": "Lógica booleana",
+            "fileurl": "Python/Bools/Logicabooleana.html"
+        },{
+            "name": "If loop",
+            "fileurl": "Python/Bools/Logicabooleana.html"
+        }]
     }]
 }, {
     "language": "#Developers",

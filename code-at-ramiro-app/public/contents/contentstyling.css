@@ -38,13 +38,13 @@ ul li {
 }
 
 pre {
-    width: 70vw;
+    width: 90%;
     height: auto;
 }
 
 pre code {
     height: 100%;
-    width: 95%;
+    width: 90%;
 }
 
 .caption {

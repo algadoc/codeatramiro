@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Print</title>
+    <meta name="Alfonso Lagares" content="El comando help">
+
+    <link rel="stylesheet" href="/contents/prism.css">
+    <link rel="stylesheet" href="/contents/contentstyling.css">
+    <script src="/contents/prism.js"></script>
+</head>
+
+<body>
+    <h2>Help()</h2>
+    <h6>O como encontrar qué es un comando en un apuro</h6>
+    <p>Help() es un comando fantástico si no sabes exactamente que hace un comando o que es una variable. Con el, puedes ver qué es qué sin tener que buscarlo en internet (aunque siempre es muy recomendable).</p>
+    <p>Para usuarlo, meteremos entre los paréntesis de lo que queremos saber. Por ejemplo, para saber lo que hace el comando print() podemos ejecutar el siguiente código:</p>
+    <pre data-start="1"><code class="language-python line-numbers">help(print)</code></pre>
+    <p>Esto nos devolverá el siguiente parrafazo:</p>
+    <pre data-start="1"><code class="language-markup line-numbers">Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+(END)</code></pre>
+    <p>Conforme avancemos, iremos entendiendo qué es cada una de las cosas de las que el comando help habla. Por ahora, con conocerlo basta.</p>
+
+</body>
+
+</html>
