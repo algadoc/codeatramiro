@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Título de la subsección</title>
+    <meta name="Alfonso Lagares" content="¿Que es una variable?">
+
+    <link rel="stylesheet" href="/contents/prism.css">
+    <link rel="stylesheet" href="/contents/contentstyling.css">
+    <script src="/contents/prism.js"></script>
+</head>
+
+<body>
+    <h2>Variables</h2>
+    <h6>Como Python guarda información</h6>
+    <p>¿Como guardamos información en Python? Como explicamos previamente, Python es una máquina virtual, y por lo tanto utiliza parte de la memoria de tu ordenador para almacenar su propia información. 
+    Se puede pensar de esa memoria como cajitas individuales, cada una con la posibilidad de guardar un 1 o un 0. Esto es lo que se llama binario. Por ejemplo, un terabyte contiene 10 elevado a la 12 bytes, cada uno de los cuales contiene 8 cajitas (bits) que pueden contener ceros y unos. Por supuesto, la infinita mayoría de información que tratamos requiere de mas de un cero o uno para ser almacenados, por lo que dividimos la memoria en partes que almacenan la información. 
+    Para saber qué parte guarda qué información, a cada uno de estos espacios de memoria se les asigna un id, lo que en Python se llama <b>memory address</b> y en otros lenguajes se llaman <b>pointers</b>.</p>
+    <p>Un <b>memory address</b> le indica a Python donde debe mirar en la memoria para encontrar la información. Esto significa que a cada espacio de memoria se le asigna un número, el cual también se guarda en memoria. Para ver que número se le ha asignado a algo en Python, podemos usar la función <b>id()</b>.</p>
+    <p>Para poder almacenar algo en memoria, utilizamos <b>variables</b>. Una variable es, como en matemáticas, un símbolo que representa información. Esa información puede tomar muchas formas, pero lo importante es que la variable representa información que puede <b>cambiar</b>. ¿Por qué puede cambiar? Pues porque el usuario puede cambiar la información en sí que representa la variable. Esto le da a las variables un potencial increible, el cual aprendereís a usar dentro de poco. Por ahora, es importante saber que una variable en Python no referencia directamente a una información, sino que pasa primero por un memory address, que luego va a un espacio de memoria que alberga la información.</p>
+    <p>Para terminar, vamos a ver como creamos una variable en Python. Es muy facil, porque Python asume que todo lo que ecribamos es una variable. Es decir:</p>
+    <pre data-start="0"><code class="language-python line-numbers">#a es una variable
+a</code></pre>
+    <p>A cada variable le ponemos un nombre, el cual puede ser prácticamente cualquier palabra. No hay reglas para decidir un nombre, pero se recomienda que sea corto, que tenga relación con la información que va a guardar y que no contenga carácteres especiales.</p>
+</body>
