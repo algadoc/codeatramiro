@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Maquina virtual de Python</title>
+    <meta name="Alfonso Lagares" content="La maquina virtual de Python">
+
+    <link rel="stylesheet" href="/contents/prism.css">
+    <link rel="stylesheet" href="/contents/contentstyling.css">
+    <script src="/contents/prism.js"></script>
+</head>
+
+<body>
+    <h2>La máquina virtual de Python</h2>
+    <h6>Es mas sencillo de lo que parece</h6>
+    <p>¿Máquina virtual? ¿Qué es eso? Suena complicado, pero en realidad es muy sencillo. Máquina, en este caso, se refiere a un ordenador. El ordenador con el que estas viendo esta página web es un objeto físico que utiliza electricidad para realizar dos
+        funciones principales: <b>Almacenar información</b> y <b>realizar operaciones sobre esa información</b>. A ese almacenaje lo llamamos <b>memoria</b>.</p>
+    <p> Tu ordenador ahora mismo está realizando miles de operaciones, desde calcular el color de los píxeles que tiene que mandar a la pantalla hasta comprobar si te ha llegado un correo nuevo. Todas estas operaciones tienen como objetivo cambiar la información
+        que hay almacenada de alguna manera, con algún objetivo.</p>
+    <p>Una máquina virtual es, por así decirlo, un ordenador dentro de un ordenador. Es decir, una máquina virtual toma parte de la memoria de tu ordenador y parte de su potencia computacional para que funcione como un ordenador, esta vez sin piezas físicas.
+        Esta máquina virtual acepta instrucciones, las cuales podemos escribir y guardar en la memoria de la máquina para que las ejecute.</p>
+    <p>La máquina virtual de Python es un programa que se instala en tu ordenador y utiliza sus recursos para ejecutar instrucciones escritas en Python, lo que llamaremos a partir de ahora <b>scripts</b>. A través de estas instrucciones, podemos alterar
+        la información que esta máquina virtual contiene.</p>
+    <p>Te estarán asaltando un millón de preguntas ahora mismo. ¿Como puede la máquina virtual entender Python, pero mi ordenador no? ¿Como funciona la máquina virtual por dentro? ¿Como interactuan la máquina virtual y mi ordenador? Es bueno cuestionarlo
+        todo, pero esto me ayuda a explicar un concepto crítico en programación, llamado <b>abstracción</b>.</p>
+    <p>La <b>abstracción</b> consiste en aislar partes de un programa o proceso del resto de partes. Es decir, cuando vemos una parte de un proceso no hay que preguntarse "¿como lo hace?" sino "¿qué hace?". Por ejemplo, volviendo al tema de la cocina: cunado
+        estas friendo unas patatas, ¿necesitas saber como funciona la freidora? ¡No! solo necesitas saber como funciona. En la freidora, metes patatas crudas y salen, después de un rato, patatas fritas.</p>
+    <p>En programación es exactamente igual. Cuando tenemos un problema muy complejo que resolver,tenemos que dividirlo en problemas mas pequeños, y una vez los solucionamos (o mas a menudo, alguien los resuelve por nosotros) tenemos que olvidarnos de como
+        funciona y centrarnos en qué hace. Volvamos a la cocina para comprender a lo que me refiero.</p>
+    <p>¿Como hace uno una pizza? Bueno, hacer una pizza es en realidad hacer una masa y una salsa de tomate. De un problema complicado, hemos creado dos problemas mas pequeños y factibles. Entonces, vamos a ver como hacer una pizza:</p>
+    <pre data-start="0"><code class="language-markup line-numbers">
+Hacer masa de pizza
+Hacer salsa de tomate
+Estirar la masa de pizza
+Poner la salsa sobre la masa de pizza
+Poner toppings sobre la salsa
+Hornear
+    </code></pre>
+    <p>Esta receta parece correcta, pero si nos fijamos no es completa. ¿Por qué? Bueno, ¿como se hace una masa para pizza, o una salsa de tomate? Para que un ordenador siga unas instrucciones, necesitamos detallarlo todo. Por lo tanto, podemos definir como
+        hacer la masa y la salsa de tomate.</p>
+    <pre data-start="0"><code class="language-markup line-numbers">
+Hacer masa de pizza = {
+    Mezclar agua, harina, huevo y levadura
+    Amasar hasta que la mezcla sea homogénea
+    Dejar reposar cubierta con aceite  
+}
+    </code></pre>
+    <pre data-start="0"><code class="language-markup line-numbers">
+Hacer salsa de tomate = {
+    Picar tomates maduros
+    Mezclar los tomates picados, especias y aceite en una olla
+    Cocer y reducir hasta que sea los suficientemente densa
+}
+    </code></pre>
+    <p>Si te das cuenta, la receta inicial de la pizza puede ser completada con estas dos piezas mas pequeñas. Podríamos completarla, pero normalmente no hace falta. ¿Por qué? Bueno, normalmente uno compra la masa de pizza y la salsa de tomate ya hecha.
+        Para hacer una pizza, ¿de verdad necesitas conocer como se hace la masa o la salsa, si ya viene hecha?. Eso es abstracción. Dividir el problema en problemas mas pequeños, encontrar soluciones para cada uno de esos pequeños problemas y una vez
+        solucionados olvidarse de como funcionan esas soluciones y centrarse en qué hacen.</p>
+    <p>Así que, vamos a recapitular:</p>
+    <ul>
+        <li>Python funciona dentro de una <b>máquina virtual</b>, la cual <b>almacena información</b> y <b>realiza operaciones sobre esa información</b>.</li>
+        <li>Un <b>script</b> te permite interactuar con la máquina virtual a través de unas instrucciones.</li>
+        <li>La <b>abstracción</b> es primordial para crear programas, y te permite solucionar problemas muy complicados. Consiste en:
+            <ul>
+                <li><b>Dividir</b> el problema principal en otros problemas mas pequeños.</li>
+                <li><b>Solucionar</b> cada pequeño problema.</li>
+                <li><b>Olvidarse</b> de como funciona cada pequeño programa y centrarse en qué hacen.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Extra: si quieres saber más acerca de la máquina virtual de Python, te dejamos unos enlaces que leer. No es necesario para la infinidad de programadores, pero si te carcome la curiosidad es una buena manera de echar una tarde</p>
+    <ul>
+        <li><a href="https://www.geeksforgeeks.org/internal-working-of-python/#:~:text=Python%20is%20called%20an%20interpreted%20language.&text=So%20we%20need%20actually%20an,a%20python%20code%20or%20instruction.">Internal Working of Python - GeeksforGeeks</a></li>
+        <li><a href="https://medium.com/@caiocozza.art/a-quick-overview-of-the-python-virtual-machine-pt-1-315e74c036f4">A quick overview of the Python Virtual Machine — Pt. 1</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/CPython">CPython - Wikipedia</a></li>
+    </ul>
+</body>
+
+</html>

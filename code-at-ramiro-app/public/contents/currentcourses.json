@@ -1,100 +1,106 @@
 [{
-        "language": "Python",
-        "languageico": "Python/images/pythonlogo.png",
-        "sections": [{
-                "name": "Intro to Python",
-                "subsections": [{
-                        "name": "Intro",
-                        "fileurl": "Python/Test1.html"
-                    },
-                    {
-                        "name": "Syntax",
-                        "fileurl": "Python/Test2.html"
-                    },
-                    {
-                        "name": "Syntax 2",
-                        "fileurl": "Python/index.html"
-                    }
-                ]
+    "language": "Python",
+    "languageico": "Python/images/pythonlogo.png",
+    "sections": [{
+        "name": "Intro - ¿Qué es Python?",
+        "subsections": [{
+                "name": "¿Qué es Python?",
+                "fileurl": "Python/Intro/QueesPython.html"
             },
             {
-                "name": "Getting into it",
-                "subsections": [{
-                        "name": "Heavy 1",
-                        "fileurl": ".Python/Test1.html"
-                    },
-                    {
-                        "name": "Heavy 2",
-                        "fileurl": "../contents/Python/Test1.html"
-                    },
-                    {
-                        "name": "Heavy 3",
-                        "fileurl": "../contents/Python/Test1.html"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "language": "Java",
-        "languageico": "Java/images/javaicon.png",
-        "sections": [{
-                "name": "Intro to Java",
-                "subsections": [{
-                    "name": "What is Java?",
-                    "fileurl": "Java/Javascript1.html"
-                }]
-            }
-
-        ]
-    }, {
-        "language": "JavaScript",
-        "languageico": "Javascript/images/javascriptico.png",
-        "sections": [{
-                "name": "Intro to Javascript",
-                "subsections": [{
-                    "name": "What is Java?",
-                    "fileurl": "Java/Javascript1.html"
-                }]
-            }
-
-        ]
-    },
-    {
-        "language": "#Developers",
-        "languageico": "Devs/images/developersicon.png",
-        "sections": [{
-                "name": "Introducción",
-                "subsections": [{
-                        "name": "Breve resumen de la página",
-                        "fileurl": "Devs/Breveresumen.html"
-                    },
-                    {
-                        "name": "Funcionamiento",
-                        "fileurl": "Devs/Functionamiento.html"
-                    },
-                    {
-                        "name": "El sistema de materiales",
-                        "fileurl": "Devs/Sistemademateriales.html"
-                    }
-                ]
+                "name": "La máquina virtual de Python",
+                "fileurl": "Python/Intro/MaquinaVirtualPython.html"
             },
             {
-                "name": "Como crear contenidos",
-                "subsections": [{
-                        "name": "Template: ejemplos y uso",
-                        "fileurl": "Devs/Templateejemplosyusos.html"
-                    },
-                    {
-                        "name": "Como introducir código",
-                        "fileurl": "Devs/Introducircódigo.html"
-                    },
-                    {
-                        "name": "Como introducir imágenes",
-                        "fileurl": "Devs/Introducirimagenes.html"
-                    }
-                ]
+                "name": "La consola de Python",
+                "fileurl": "Python/Intro/ConsolaPython.html"
             }
-        ]
-    }
-]
+        ]},{
+        "name": "Hello world y comandos básicos",
+        "subsections": [{
+            "name": "Print()",
+            "fileurl": "Python/HelloWorld/Print.html"
+        },{
+            "name": "Input()",
+            "fileurl": "Python/HelloWorld/Input.html"
+        },{
+            "name": "Help()",
+            "fileurl": "Python/HelloWorld/Help.html"
+        },{
+            "name":"Comentarios",
+            "fileurl":"Python/HelloWorld/Comentarios.html"
+        }
+        ]},{
+        "name": "Variables",
+        "subsections":[{
+            "name": "¿Qué es una variable?",
+            "fileurl": "Python/Variables/QueesVariables.html"
+        },{
+            "name": "Integers y Floats",
+            "fileurl": "Python/Variables/Integersyfloats.html"
+        },{
+            "name": "Strings",
+            "fileurl": "Python/Variables/Strings.html"
+        },{
+            "name": "Arrays (listas)",
+            "fileurl": "Python/Variables/Arrays.html"
+        },{
+            "name": "Diccionarios",
+            "fileurl": "Python/Variables/Dics.html"
+        },{
+            "name": "Tuplas",
+            "fileurl": "Python/Variables/Tuplas.html"
+        },{
+            "name": "Sets",
+            "fileurl": "Python/Variables/Sets.html"
+        }]
+    },{
+        "name": "Bools y Ifs",
+        "subsections":[{
+            "name": "¿Qué es un booleano?",
+            "fileurl": "Python/Bools/QueesBooleano.html"
+        },{
+            "name": "Lógica booleana",
+            "fileurl": "Python/Bools/Logicabooleana.html"
+        },{
+            "name": "If loop",
+            "fileurl": "Python/Bools/Logicabooleana.html"
+        }]
+    }]
+}, {
+    "language": "#Developers",
+    "languageico": "Devs/images/developersicon.png",
+    "sections": [{
+            "name": "Introducción",
+            "subsections": [{
+                    "name": "Breve resumen de la página",
+                    "fileurl": "Devs/Breveresumen.html"
+                },
+                {
+                    "name": "Funcionamiento",
+                    "fileurl": "Devs/Functionamiento.html"
+                },
+                {
+                    "name": "El sistema de materiales",
+                    "fileurl": "Devs/Sistemademateriales.html"
+                }
+            ]
+        },
+        {
+            "name": "Como crear contenidos",
+            "subsections": [{
+                    "name": "Template: ejemplos y uso",
+                    "fileurl": "Devs/Templateejemplosyusos.html"
+                },
+                {
+                    "name": "Como introducir código",
+                    "fileurl": "Devs/Introducircódigo.html"
+                },
+                {
+                    "name": "Como introducir imágenes",
+                    "fileurl": "Devs/Introducirimagenes.html"
+                }
+            ]
+        }
+    ]
+}]
