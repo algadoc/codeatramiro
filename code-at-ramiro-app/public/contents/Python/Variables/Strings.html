@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Strings</title>
+  <meta name="Alex Brodbelt" content="Strings">
+
+  <link rel="stylesheet" href="/contents/prism.css">
+  <link rel="stylesheet" href="/contents/contentstyling.css">
+  <script src="/contents/prism.js"></script>
+</head>
+
+<body>
+
+  <h2>Strings (Cadena de Texto)</h2>
+  <h6>Cadenas de texto</h6>
+  <p>Al igual que se pueden guardar números (integers y floats), es posible almacenar <b>strings</b>(cadenas de texto) en una variable. Sin embargo, a diferencia de los <b>integers</b> y <b>floats</b> es necesario establecer que la cadena de texto a la que estamos asignando no es una variable y para ello se emplean las ' ' o " " Me explico: </p>
+  <!--<p>Esto es un párrafo con un <a target="_blank" href="https://github.com/algadoc/codeatramiro">link</a> en el </p>-->
+<pre data-start="0"><code class="language-python line-numbers">
+  a = hola
+
+  print(a)
+
+  '''Prints:
+  Traceback (most recent call last):
+  File "<pyshell#33>", line 0, in <module>
+    a = hola
+NameError: name 'hola' is not defined''' 
+  </code>
+  </pre>
+
+
+
+  </code>
+  </pre>
+  <p>Al no haber contenido <i>hola</i> en ' ' como 'hola', la shell de python nos devuelve un <i>NameError</i>, ya que interpreta hola como una variable más, que en este caso no está definida. Para evitar este error es necesario contener la cadena de text que deseamos en unas ' ', como sigue en el ejemplo.</p>
+  <!--<p>Esto es un párrafo con un <a target="_blank" href="https://github.com/algadoc/codeatramiro">link</a> en el </p>-->
+<pre data-start="0"><code class="language-python line-numbers">
+a = 'hola'
+
+print(a)
+
+#prints: hola
+    </code></pre>
+      
+    
+    <p>Sabiendo como guardar una <b>string</b> en una variable, se puede hacer una infinidad de cosas con ellas y aprovechar muchas propiedades que pueden resultar muy útiles. Para ilustrar lo que digo, ejemplificaré algunas operaciones y <em>métodos (que ya conoceremos con más detalle más adelante)</em> que se pueden emplear con las string. Pero como digo, hay una gran cantidad de cosas que se pueden hacer con las strings y para ello, os dejaremos aquí una <em>cheat sheet</em> a la que podreis acceder siempre que querais.</p> 
+<pre data-start="0"><code class="language-python line-numbers">
+    '''concatenation'''
+b = 'Hello ' + 'World'
+
+print(b)
+
+#prints: Hello World
+
+c = 5*'Hello World'
+
+print(c)
+#prints: Hello WorldHello WorldHello WorldHello WorldHello World
+</code></pre>
+    <p>Como también veremos con los <b>lists</b> en la siguiente subsección, podemos slicear los strings, es decir escoger una porción de la <b>string</b> original, para ello se hace <em>string[start:end]</em> . Es importante notar que es un intervalo no inclusivo, no incluye la posición de <em>end</em> sino que coge hasta <em>end - 1</em>. 
+    <p>Además es útil conocer que el default de <em>start</em> es 0 y el de <em>end</em> es hasta todo el string. Clarifiquemos</p>
+<pre data-start="0"><code class="language-python line-numbers">
+    '''string slicing'''
+b = 'HeAlexllo'
+     012345678  
+
+c = b[2:6] # string[start:end] -> Python starts with index 0!!!!
+
+print(c)
+#prints: Alex
+
+d = b[:2] + b[6:] + ' ' + c # b[0:2] = b[:2] y b[6:] = b[6:9]
+
+print(d)
+#prints: Hello Alex 
+</code></pre>
+    <p>Ejemplos de <b>métodos</b>. Aquí adelanto con muy poco detalle la existencia de métodos y funciones, pero la intención es mostrar algunas cosas que se pueden hacer con stringsy la interrelación entre los distintos <b>objetos</b></p>
+<pre data-start="0"><code class="language-python line-numbers">
+  '''splitting una string'''
+a = 'DFdjvnfnv-kmfkfinirn'
+
+b = a.split('-') # separa la string por el carácter '-', el default es el espacio ' '
+
+print(b)
+#prints: ['DFdjvnfnv', kmfkfinirn ]
+
+d = '1Hello2Hello3Hello4'
+
+e = d.split('Hello')
+
+print(e)
+#prints: [1, 2, 3, 4]
+
+
+        
+ </code></pre>
+ <pre data-start="0"><code class="language-python line-numbers">
+'''replace'''
+a = 'la patata y la banana'
+
+b = a.replace('a', 'i')
+
+print(b)
+#prints: li pititi y li binini
+
+</code></pre>
+
+
+
+    <p>Aquí os dejamos un cheat sheet a la que podreis acceder si es que quereis conocer otras de las muchas de las cosas que se pueden hacer con las <b>strings</b>. Pero sabed que hay mucho más.</p>
+    <a href="https://www.shortcutfoo.com/app/dojos/python-strings/cheatsheet">Métodos para strings</a>
+</body>
+</html>
