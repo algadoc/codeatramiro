@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Arrays</title>
+    <meta name="Alex Brodbelt" content="Arrays">
+
+    <link rel="stylesheet" href="/contents/prism.css">
+    <link rel="stylesheet" href="/contents/contentstyling.css">
+    <script src="/contents/prism.js"></script>
+</head>
+
+<body>
+    <h2>Lists (Arrays)</h2>
+    <h6>[Ordenemos, información!]</h6>
+    <p>Como podreis comprobar a medida que os adentreis en el mundo de programación, los objetos (integers, floats, strings, etc.) que componen un lenguaje de programación son empleados como queramos para realizar todo tipo de tareas. Con esto en mente, introducimos las <b>listas</b>. En esencia las listas son contenedores para secuencias de <b>integers</b>, <b>floats</b>, <b>cadenas de texto</b>, etc. Tienen la propiedad ser <em>iterables</em> e <em>indexables</em>. Es decir, son secuencias ordenadas por las que podemas iterar ("pasar por ellas"). Ilustremos con algunas listas(arrays):</p>
+    <pre data-start="0"><code class="language-python line-numbers">
+    array = [1, "two", "3", 4, 4.5]
+    '''Es casi idéntico definir una lista mediante:'''
+    array = list(1, "two", "3", 4, 4.5)
+    </code>
+    </pre>
+    <p>
+        Ahora veamos la utilidad de esto. En las listas podemos acceder a elementos de la lista mediante su <em>índice</em>:
+    </p>
+    <pre data-start="5"><code class="language-python line-numbers">
+    print(array[0], array[2], array[5]) #tambíen se puede escribir el print() de este modo, e imprimir los argumentos en una misma línea
+    </code></pre>
+    <img src="code-at-ramiro-app\public\contents\Python\images\arrays.png" alt="IDLE Python">
+    <p>¿Por qué da error al pedir el 5 elemento de la lista? la respuesta es que en los lenguajes de programación se empieza a "contar" por 0, en vez de 1.\n Veamos ahora lo que es el "slicing", el acceder a numerosos elementos de una lista.</p>
+    <p>Esto es un párrafo con un <a target="_blank" href="https://github.com/algadoc/codeatramiro">link</a> en el </p>
+    <pre data-start="10"><code class="language-python line-numbers">
+  print(array[2:4])
+  print(array[::])
+  print(array[1::2])
+  print(array[::-1])
+  </code>
+  </pre>
+  <img src="code-at-ramiro-app\public\contents\Python\images\arrays1.png" alt="IDLE Python - Slicing">
+  <p>Como se pueden acceder a los 3 hasta el 4 (incluido), a todos los elementos, los elementos a partir del 2 y cogiendo cada 2º elemento, coger todos los elementos pero en orden contrario, etc.
+    De un manera más general, el array[a:b:c] empieza desde el a-1, acaba en el b-1 y coge cada cº elemento. Es decir, podemos pensar esto como un intervalo cerrado que coge de la secuencia cada c veces. El default es coger todo en orden (array[::]). </p>
+    <p>Algo que vermos más adelante, es que las listas son empleados muchas veces con los <em>for loop</em> tanto para generarlas como para utilizarla la información que contienen. Pondré un ejemplo (que se explicará muy brevemente):</p>
+  <pre data-start="1"><code class="language-python line-numbers">
+  for i in array:
+      print(i)
+
+  for i in [array ::-1]:
+    print(i)
+    </code>
+    </pre>
+    <img src="code-at-ramiro-app\public\contents\Python\images\arrays2.png" alt="IDLE Python - For loops with arrays">
+    <p>Como veis, estos <em>for loops</em> están iterando por la lista. Es decir, primero cogen el 0º elemento, luego el 1º y así sucesivamente hasta que no hay otro elemento en la lista "array".</p>
+    <p>Al igual que con el resto de objetos, las utilidades son infinitas.En particular, las listas nos permiten guardar información que luego podemos acceder y emplear como se quiera.\n Para cerrar esta subscción, adjuntaré un link a la que podreis acceder os métodos y más funcionalidades que tienen las listas.</p>
+    <a href="https://www.w3schools.com/python/python_ref_list.asp">List methods</a>
+</body>
+
+</html>
